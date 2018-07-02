@@ -1,0 +1,49 @@
+/* MASTER CSS for whole site, individual pages have overriding CSS in place*/
+/* /Divider Formatting/ */
+.text {
+	position: fixed;
+	top: 50%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	line-height: 42px;
+}
+
+.footer {
+	position: fixed;
+	top: 90%;
+	left: 75%;
+	font-size: 15.5px;
+}
+
+
+
+/* /Text and Background Formatting/ */
+body { 
+    font-family: "Courier New", Courier, Monospace, Times;
+	color: white;
+	text-align: center;
+	background-color:  #398E21;
+	background-image: url('http://imageshack.com/a/img921/1338/tWeelB.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* text highlight*/
+mark{
+	opacity: 0.85;
+    filter: alpha(opacity=85); /* For IE8 and earlier :L */
+	line-height: 130%;
+	background-color: #CC0000;
+	color: white;
+}
+p.sub{
+	background-color: white;
+	color: #CC0000;
+	opacity: 0.65;
+	font-size: 22.5px;
+}
+
+
+h1{
+  font-size: 30px;
+}
