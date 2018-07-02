@@ -1,1 +1,1 @@
-sudo git clone https://github.com/conorhennessy/php-Boy.git /var/www/html
+sudo git pull
