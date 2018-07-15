@@ -1,7 +1,7 @@
 #!/bin/bash
 while true
 do
-	sudo git fetch -all
+	sudo git fetch --all
 	sudo git reset --hard origin/master
 	sudo git pull
 	sudo chmod +x /var/www/html/*.sh
