@@ -73,13 +73,13 @@ div.clock .placeholder {
 
 
 /* AM OR PM*/
-.am-pm {
+.meridian {
 	font-family: sans-serif;
 	text-transform: uppercase;
 	width: 20px;
 }
 
-div.am-pm div p {
+div.meridian div p {
 	font-size: 12px;
 	font-weight: bold;
 	width: 100%;

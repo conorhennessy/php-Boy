@@ -52,7 +52,7 @@
 		<!-- CLOCK -->
 		<div class="clock">
 			<!-- HOUR -->
-			<div class="numbers">
+			<div class="number">
 				<p class="hours"></p>
 				<p class="placeholder">88</p>
 			</div>
@@ -62,7 +62,7 @@
 			</div>
 
 			<!-- MINUTE -->
-			<div class="numbers">
+			<div class="number">
 				<p class="minutes"></p>
 				<p class="placeholder">88</p>
 			</div>
@@ -72,13 +72,13 @@
 			</div>
 
 			<!-- SECOND -->
-			<div class="numbers">
+			<div class="number">
 				<p class="seconds"></p>
 				<p class="placeholder">88</p>
 			</div>
 			
 			<!-- AM / PM -->
-			<div class="am-pm">
+			<div class="meridian">
 
 				<!-- AM -->
 				<div>

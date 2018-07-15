@@ -1,11 +1,11 @@
 //invokes functions as soon as window loads
 window.onload = function(){
 	time();
-	ampm();
+	meridian();
 	whatDay();
 	setInterval(function(){
 		time();
-		ampm();
+		meridian();
 		whatDay();
 	}, 1000);
 };
@@ -39,7 +39,7 @@ function addZero (val){
 }
 
 //lights up either am or pm on clock
-function ampm(){
+function meridian(){
 	var date = new Date(),
 		hours = date.getHours(),
 		am = document.getElementsByClassName("am")[0].classList,
