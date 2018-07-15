@@ -1,0 +1,138 @@
+{
+  "atcocode": "1500IM2533",
+  "smscode": "esxgjgja",
+  "request_time": "2018-07-15T18:38:46+01:00",
+  "name": "The Flag",
+  "stop_name": "The Flag",
+  "bearing": "N",
+  "indicator": "opp",
+  "locality": "Wivenhoe",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      0.96304,
+      51.86894
+    ]
+  },
+  "departures": {
+    "62B": [
+      {
+        "mode": "bus",
+        "line": "62B",
+        "line_name": "62B",
+        "direction": "Colch North Stn",
+        "operator": "FESX",
+        "date": "2018-07-15",
+        "expected_departure_date": "2018-07-15",
+        "aimed_departure_time": "18:56",
+        "expected_departure_time": "18:56",
+        "best_departure_estimate": "18:56",
+        "source": "NextBuses",
+        "dir": "outbound",
+        "id": "http://transportapi.com/v3/uk/bus/route/FESX/62B/outbound/1500IM2533/2018-07-15/18:56/timetable.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e",
+        "operator_name": "First in Essex"
+      },
+      {
+        "mode": "bus",
+        "line": "62B",
+        "line_name": "62B",
+        "direction": "Colch North Stn",
+        "operator": "FESX",
+        "date": "2018-07-15",
+        "expected_departure_date": null,
+        "aimed_departure_time": "19:26",
+        "expected_departure_time": null,
+        "best_departure_estimate": "19:26",
+        "source": "NextBuses",
+        "dir": "outbound",
+        "id": "http://transportapi.com/v3/uk/bus/route/FESX/62B/outbound/1500IM2533/2018-07-15/19:26/timetable.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e",
+        "operator_name": "First in Essex"
+      },
+      {
+        "mode": "bus",
+        "line": "62B",
+        "line_name": "62B",
+        "direction": "Colch North Stn",
+        "operator": "FESX",
+        "date": "2018-07-15",
+        "expected_departure_date": null,
+        "aimed_departure_time": "19:56",
+        "expected_departure_time": null,
+        "best_departure_estimate": "19:56",
+        "source": "NextBuses",
+        "dir": "outbound",
+        "id": "http://transportapi.com/v3/uk/bus/route/FESX/62B/outbound/1500IM2533/2018-07-15/19:56/timetable.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e",
+        "operator_name": "First in Essex"
+      }
+    ],
+    "61": [
+      {
+        "mode": "bus",
+        "line": "61",
+        "line_name": "61",
+        "direction": "Colch Head St",
+        "operator": "FESX",
+        "date": "2018-07-15",
+        "expected_departure_date": "2018-07-15",
+        "aimed_departure_time": "18:58",
+        "expected_departure_time": "18:58",
+        "best_departure_estimate": "18:58",
+        "source": "NextBuses",
+        "dir": "inbound",
+        "id": "http://transportapi.com/v3/uk/bus/route/FESX/61/inbound/1500IM2533/2018-07-15/18:58/timetable.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e",
+        "operator_name": "First in Essex"
+      },
+      {
+        "mode": "bus",
+        "line": "61",
+        "line_name": "61",
+        "direction": "Colch Head St",
+        "operator": "FESX",
+        "date": "2018-07-15",
+        "expected_departure_date": "2018-07-15",
+        "aimed_departure_time": "19:28",
+        "expected_departure_time": "19:28",
+        "best_departure_estimate": "19:28",
+        "source": "NextBuses",
+        "dir": "inbound",
+        "id": "http://transportapi.com/v3/uk/bus/route/FESX/61/inbound/1500IM2533/2018-07-15/19:28/timetable.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e",
+        "operator_name": "First in Essex"
+      },
+      {
+        "mode": "bus",
+        "line": "61",
+        "line_name": "61",
+        "direction": "Colch Head St",
+        "operator": "FESX",
+        "date": "2018-07-15",
+        "expected_departure_date": null,
+        "aimed_departure_time": "19:58",
+        "expected_departure_time": null,
+        "best_departure_estimate": "19:58",
+        "source": "NextBuses",
+        "dir": "inbound",
+        "id": "http://transportapi.com/v3/uk/bus/route/FESX/61/inbound/1500IM2533/2018-07-15/19:58/timetable.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e",
+        "operator_name": "First in Essex"
+      }
+    ],
+    "74A": [
+      {
+        "mode": "bus",
+        "line": "74A",
+        "line_name": "74A",
+        "direction": "Colchester Town Centre, Stanwell Street",
+        "operator": "FESX",
+        "date": "2018-07-15",
+        "expected_departure_date": null,
+        "aimed_departure_time": "19:43",
+        "expected_departure_time": null,
+        "best_departure_estimate": "19:43",
+        "source": "NextBuses",
+        "dir": "outbound",
+        "id": "http://transportapi.com/v3/uk/bus/route/FESX/74A/outbound/1500IM2533/2018-07-15/19:43/timetable.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e",
+        "operator_name": "First in Essex"
+      }
+    ]
+  },
+  "source": "NextBuses"
+}
