@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "testjson.json", false);
+xmlhttp.open("GET", "http://transportapi.com/v3/uk/bus/stop/1500IM2533/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e", false);
 xmlhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		var ToColOBJ = JSON.parse(this.responseText)				
