@@ -19,10 +19,6 @@
 	<main>
 		<!-- DAY OF THE WEEK -->
 		<div class="days">
-		
-			<div class="day">
-				<p class="sunday">sunday</p>
-			</div>
 
 			<div class="day">
 				<p class="monday">monday</p>
@@ -46,6 +42,10 @@
 
 			<div class="day">
 				<p class="saturday">saturday</p>
+			</div>
+			
+			<div class="day">
+				<p class="sunday">sunday</p>
 			</div>
 
 		</div>

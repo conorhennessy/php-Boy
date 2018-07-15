@@ -53,14 +53,16 @@ function ampm(){
 //lights up what day of the week it is
 function whatDay(){
 	var date = new Date(),
-		currentDay = date.getDay(),
-		days = document.getElementsByClassName("day");
+	currentDay = date.getDay();
+	if (currentDay == 0) { currentDay = 6; }
+	else { currentDay == currentDay - 1; }
+	var days = document.getElementsByClassName("day");
 
 	//iterates through all divs with a class of "day"
 	for (x in days){
 		//list of classes in current div
 		var classArr = days[x].classList;
-
+		
 		(classArr !== undefined) && ((x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on"));
 	}
 }
