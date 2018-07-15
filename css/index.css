@@ -34,7 +34,7 @@ div.dateAndClock {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    /*transform: translate(-50%,-50%); */
+    transform: translate(-1%,-1%); 
     padding: 15px;
     border: solid 5px #ffffff;
 }
