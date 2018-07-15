@@ -14,32 +14,31 @@
 <body>
 <body>
 	<div class="bus">
-	<p class="tittle" >Busses from Wivenhoe...</p>
-	<!-- script src=""></script -->
+	<p class="tittle">Busses to Colchester:</p>
 	<table class="busTimes">
 	  <tr class="bus">
-		<td class="bus" id="bus0">Bus 0</th>
-		<td id="bus0time0">12:00</th>
-		<td id="bus0time1">12:00</th>
-		<td id="bus0time2">12:00</th>
+		<td class="bus" id="bus0"></th>
+		<td id="bus0time0"></th>
+		<td id="bus0time1"></th>
+		<td id="bus0time2"></th>
 	  </tr>
 	  <tr class="bus">
-		<td class="bus" id="bus1">Bus 1</td>
-		<td id="bus1time0">12:00</td>
-		<td id="bus1time1">12:00</td>
-		<td id="bus1time2">12:00</td>
+		<td class="bus" id="bus1"></td>
+		<td id="bus1time0"></td>
+		<td id="bus1time1"></td>
+		<td id="bus1time2"></td>
 	  </tr>
 	  <tr class="bus">
-		<td class="bus" id="bus2">Bus 2</td>
-		<td id="bus2time0">12:00</td>
-		<td id="bus2time1">12:00</td>
-		<td id="bus2time2">12:00</td>
+		<td class="bus" id="bus2"></td>
+		<td id="bus2time0"></td>
+		<td id="bus2time1"></td>
+		<td id="bus2time2"></td>
 	  </tr>
 	  <tr class="bus">
-		<td class="bus" id="bus3">Bus 3</td>
-		<td id="bus2time0">12:00</td>
-		<td id="bus2time1">12:00</td>
-		<td id="bus2time2">12:00</td>
+		<td class="bus" id="bus3"></td>
+		<td id="bus2time0"></td>
+		<td id="bus2time1"></td>
+		<td id="bus2time2"></td>
 	  </tr>
 	</table>
 	<script src="getbustimes.js"> </script>
@@ -47,11 +46,13 @@
 	</div>
 	
 	<div class="news">
+	<p class="tittle">BBC News:</p></br>
 	<p>Sorry BBC News can not be accessed right now :( </p>
 	</div>
 	
 	<div class="weather">
-	<p class="tittle">Weather in Wivenhoe...</p>
+	<p class="tittle">Weather in Wivenhoe:</p></br>
+	<p>Sorry local weather can not be accessed right now :( </p>
 	</div>
 
 	<div class="dateAndClock">

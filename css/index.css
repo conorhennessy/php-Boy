@@ -18,6 +18,9 @@ body {
 	font-family: 'digital-7', sans-serif;
 }
 
+
+
+/* /Bus Piece/ */
 div.bus {
 	text-align: center;
     position: absolute;
@@ -60,6 +63,8 @@ td {
 }
 
 
+
+/* /News Piece/ */
 div.news {
 	text-align: center;
     position: absolute;
@@ -77,6 +82,9 @@ div.news {
 	text-transform: uppercase;
 }
 
+
+
+/* /Weather Piece/ */
 div.weather {
 	text-align: center;
     position: absolute;
@@ -87,16 +95,16 @@ div.weather {
     border: solid 5px #ffffff;
 }
 
-div.weather p.tittle{
+div.weather {
 	font-size: 12px;
 	font-weight: bold;
 	font-family: sans-serif;
 	text-transform: uppercase;
-	font-style: italic;
 }
 
 
-/* Date and clock piece */
+
+/* /Date and clock piece/ */
 div.dateAndClock {
 	text-align: center;
     position: absolute;
@@ -126,7 +134,7 @@ div.days .day p {
 }
 
 
-/* CLOCK */
+/* Clock */
 div.clock {
 	margin: 5px 0;
 }
@@ -147,10 +155,9 @@ div.clock .placeholder {
 	position: absolute;
 	top: 0;
 	z-index: 50;
-}/*END CLOCK*/
+}
 
-
-/* AM OR PM*/
+/* AM or PM*/
 .meridian {
 	font-family: sans-serif;
 	text-transform: uppercase;
@@ -167,7 +174,7 @@ div.meridian div p {
 	color: #ff9595;
 }
 
-/*CLASS THAT CHANGES COLOR OF TEXT TO APPEAR LIKE ITS "ON"*/
+/*Changes color of text to appear like its "on"*/
 .light-on {
 	color: #ffffff;
 }
