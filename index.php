@@ -2,8 +2,6 @@
 <html lang ="en">
 <head>
 	<meta charset="utf-8">
-
-	
 	
 	<link rel="stylesheet" href="css/index.css">
 	
@@ -15,9 +13,17 @@
 
 <body>
 <body>
+	<div class="bus">
+	</div>
+	
+	<div class="news">
+	</div>
+	
+	<div class="weather">
+	</div>
 
-	<main>
-		<!-- DAY OF THE WEEK -->
+	<div class="dateAndClock">
+		<!-- Day of the week -->
 		<div class="days">
 
 			<div class="day">
@@ -49,7 +55,7 @@
 			</div>
 
 		</div>
-		<!-- CLOCK -->
+		<!-- Clock -->
 		<div class="clock">
 			<!-- HOUR -->
 			<div class="number">
@@ -77,7 +83,7 @@
 				<p class="placeholder">88</p>
 			</div>
 			
-			<!-- AM / PM -->
+			<!-- AM or PM meridian-->
 			<div class="meridian">
 
 				<!-- AM -->
@@ -90,13 +96,12 @@
 					<p class="pm">pm</p>
 				</div>
 			</div>
-
-		</div><!-- END CLOCK -->
-
-	</main>
-
-	
+		</div>
 	<script src="clock.js"> </script>
+	</div>
+	
+
+
 </body>
 
 </html>
