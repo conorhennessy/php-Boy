@@ -14,12 +14,44 @@
 <body>
 <body>
 	<div class="bus">
+	<p class="tittle" >Busses from Wivenhoe...</p>
+	<!-- script src=""></script -->
+	<table class="busTimes">
+	  <tr class="bus">
+		<td class="bus" id="bus0">Bus 0</th>
+		<td id="bus0time0">12:00</th>
+		<td id="bus0time1">12:00</th>
+		<td id="bus0time2">12:00</th>
+	  </tr>
+	  <tr class="bus">
+		<td class="bus" id="bus1">Bus 1</td>
+		<td id="bus1time0">12:00</td>
+		<td id="bus1time1">12:00</td>
+		<td id="bus1time2">12:00</td>
+	  </tr>
+	  <tr class="bus">
+		<td class="bus" id="bus2">Bus 2</td>
+		<td id="bus2time0">12:00</td>
+		<td id="bus2time1">12:00</td>
+		<td id="bus2time2">12:00</td>
+	  </tr>
+	  <tr class="bus">
+		<td class="bus" id="bus3">Bus 3</td>
+		<td id="bus2time0">12:00</td>
+		<td id="bus2time1">12:00</td>
+		<td id="bus2time2">12:00</td>
+	  </tr>
+	</table>
+	<script src="getbustimes.js"> </script>
+	
 	</div>
 	
 	<div class="news">
+	<p>Sorry BBC News can not be accessed right now :( </p>
 	</div>
 	
 	<div class="weather">
+	<p class="tittle">Weather in Wivenhoe...</p>
 	</div>
 
 	<div class="dateAndClock">
