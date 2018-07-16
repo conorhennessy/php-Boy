@@ -14,7 +14,7 @@
 <body>
 <body>
 	<div class="bus">
-	<p class="tittle">Busses to Colchester:</p>
+	<p class="tittle">Buses to Colchester:</p>
 	<table class="busTimes">
 	  <tr class="bus">
 		<td class="bus" id="bus0"></th>
@@ -41,7 +41,7 @@
 		<td id="bus2time2"></td>
 	  </tr>
 	</table>
-	 <script src="getbustimes.js"> </script> 
+	<!-- <script src="getbustimes.js"> </script> -->
 	
 	</div>
 	

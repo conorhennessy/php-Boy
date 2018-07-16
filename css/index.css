@@ -189,3 +189,10 @@ div.meridian div p {
 .light-on {
 	color: #ffffff;
 }
+
+
+p.jokeauthor{
+	padding-top:5px;
+	font-size:8px;
+	text-align:right;
+}
