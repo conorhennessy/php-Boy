@@ -24,10 +24,11 @@ xmlhttp.onreadystatechange = function() {
 				top=score
 				title=Risingjokes.data.children[post].data.title;
 				selftext=Risingjokes.data.children[post].data.selftext;
+				author=Risingjokes.data.children[post].data.author;
 			}
 			
 		}
-		printjoke(title,selftext);
+		printjoke(title,selftext,author);
 		
 		
 	}
@@ -35,7 +36,7 @@ xmlhttp.onreadystatechange = function() {
 
 xmlhttp.send();
 
-function printjoke(title,selftext){
+function printjoke(title,selftext,author){
 	var jokebox = document.createElement("div");
 	jokebox.className="joke";
 	
@@ -50,6 +51,12 @@ function printjoke(title,selftext){
 	selftextelm.className="jokeselftext";
 	selftextelm.appendChild(selftexttext);
 	jokebox.appendChild(selftextelm);
+	
+	var authorelem = document.createElement("p");
+	var authortext = document.createTextNode(author);
+	authorelem.className="jokeauthor";
+	authorelem.appendChild(authortext);
+	jokebox.appendChild(authorelem);
 	
 	var element = document.getElementById("joke");
 	element.appendChild(jokebox);
