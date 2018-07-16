@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "http://www.reddit.com/r/dadjokes/hot.json", true);
+xmlhttp.open("GET", "http://www.reddit.com/r/dadjokes/rising.json", true);
 xmlhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		var Risingjokes = JSON.parse(this.responseText)			

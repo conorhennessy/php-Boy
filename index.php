@@ -37,7 +37,6 @@
 		<div class="days">
 
 			<div class="day">
-				<script src="test.js"> </script>
 				<p class="monday">monday</p>
 			</div>
 
