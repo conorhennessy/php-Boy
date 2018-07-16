@@ -13,7 +13,7 @@
 
 <body>
 <body>
-	<div class="bus">
+	<div id="bus" class="bus">
 	<p class="tittle">Buses to Colchester:</p>
 	<table class="busTimes">
 	  <tr class="bus">
