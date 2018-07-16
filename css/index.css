@@ -108,7 +108,7 @@ div.weatherbox{
 	border: solid 5px #ffffff;
 	float:left;
 	height:100px;
-	
+	padding: 3px;
 	margin-left:10px;
 	margin-right:10px;
 	
@@ -194,9 +194,13 @@ div.meridian div p {
 	color: #ffffff;
 }
 
+p.subreddit{
+	font-size:12px;
+}
+
 
 p.jokeauthor{
 	padding-top:5px;
-	font-size:8px;
+	font-size:10px;
 	text-align:right;
 }
