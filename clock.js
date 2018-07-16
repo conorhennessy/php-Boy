@@ -53,12 +53,14 @@ function meridian(){
 function whatDay(){
 	var date = new Date(),
 	currentDay = date.getDay();
+	
+	//Statements to swap Mon to the first day of the week
 	if (currentDay == 1) { 
 		currentDay = 0; 
 	} else if (currentDay == 0) {
 		currentDay = 6;
 	} else { 
-		currentDay == currentDay - 1;
+		currentDay = currentDay - 1;
 	}
 	
 	var days = document.getElementsByClassName("day");
@@ -68,6 +70,6 @@ function whatDay(){
 		//list of classes in current div
 		var classArr = days[x].classList;
 		
-		(x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on");
+		(x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on");		
 	}
 }
