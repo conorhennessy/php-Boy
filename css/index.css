@@ -93,6 +93,7 @@ div.weather {
     transform: translate(-1%,-1%); 
     padding: 15px;
     border: solid 5px #ffffff;
+	width:500px;
 }
 
 div.weather {
@@ -102,7 +103,17 @@ div.weather {
 	text-transform: uppercase;
 }
 
+div.weatherbox{
+	border: solid 5px #ffffff;
+	float:left;
+	height:100px;;
+	
+}
 
+p.temp{
+	font-size:40px;
+	
+}
 
 /* /Date and clock piece/ */
 div.dateAndClock {

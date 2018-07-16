@@ -41,7 +41,7 @@
 		<td id="bus2time2"></td>
 	  </tr>
 	</table>
-	<script src="getbustimes.js"> </script>
+	<script src="getbustimes.js"> </script> 
 	
 	</div>
 	
@@ -50,11 +50,12 @@
 	<p>Sorry BBC News can not be accessed right now :( </p>
 	</div>
 	
-	<div class="weather">
-	<p class="tittle">Weather in Wivenhoe:</p></br>
-	<p>Sorry local weather can not be accessed right now :( </p>
-	</div>
+	<div id="weather" class="weather">
 
+	</div>
+	<script src="getweather.js"> </script>
+	
+	
 	<div class="dateAndClock">
 		<!-- Day of the week -->
 		<div class="days">
@@ -132,11 +133,7 @@
 		</div>
 	<script src="clock.js"> </script>
 	</div>
-	<p>
-	<?php
-	echo getHostByName(getHostName());
-	?>
-	</p>
+
 </body>
 
 </html>
