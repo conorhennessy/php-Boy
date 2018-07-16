@@ -97,6 +97,7 @@ div.weather {
 }
 
 div.weather {
+	content-align:center;
 	font-size: 12px;
 	font-weight: bold;
 	font-family: sans-serif;
@@ -106,7 +107,10 @@ div.weather {
 div.weatherbox{
 	border: solid 5px #ffffff;
 	float:left;
-	height:100px;;
+	height:100px;
+	
+	margin-left:10px;
+	margin-right:10px;
 	
 }
 

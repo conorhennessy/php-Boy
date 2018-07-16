@@ -55,6 +55,7 @@ function printjoke(title,selftext,author){
 	var authorelem = document.createElement("p");
 	var authortext = document.createTextNode(author);
 	authorelem.className="jokeauthor";
+	authorelem.appendChild(document.createTextNode("u/"));
 	authorelem.appendChild(authortext);
 	jokebox.appendChild(authorelem);
 	

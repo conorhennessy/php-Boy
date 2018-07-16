@@ -13,37 +13,12 @@
 
 <body>
 <body>
-	<div class="bus">
+	<div id="bus" class="bus">
 	<p class="tittle">Buses to Colchester:</p>
-	<table class="busTimes">
-	  <tr class="bus">
-		<td class="bus" id="bus0"></th>
-		<td id="bus0time0"></th>
-		<td id="bus0time1"></th>
-		<td id="bus0time2"></th>
-	  </tr>
-	  <tr class="bus">
-		<td class="bus" id="bus1"></td>
-		<td id="bus1time0"></td>
-		<td id="bus1time1"></td>
-		<td id="bus1time2"></td>
-	  </tr>
-	  <tr class="bus">
-		<td class="bus" id="bus2"></td>
-		<td id="bus2time0"></td>
-		<td id="bus2time1"></td>
-		<td id="bus2time2"></td>
-	  </tr>
-	  <tr class="bus">
-		<td class="bus" id="bus3"></td>
-		<td id="bus2time0"></td>
-		<td id="bus2time1"></td>
-		<td id="bus2time2"></td>
-	  </tr>
-	</table>
-	<!-- <script src="getbustimes.js"> </script> -->
+	
 	
 	</div>
+	<script src="getbustimes.js"> </script> 
 	
 	<div id="joke" class="news">
 	
