@@ -133,7 +133,7 @@
 	<script src="clock.js"> </script>
 	</div>
 	<p>
-	<php?
+	<?php
 	echo getHostByName(getHostName());
 	?>
 	</p>
