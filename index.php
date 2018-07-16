@@ -45,10 +45,11 @@
 	
 	</div>
 	
-	<div class="news">
-	<p class="tittle">BBC News:</p></br>
-	<p>Sorry BBC News can not be accessed right now :( </p>
+	<div id="joke" class="news">
+	
+	
 	</div>
+	<script src="getdadjoke.js"> </script>
 	
 	<div id="weather" class="weather">
 
