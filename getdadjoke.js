@@ -4,6 +4,17 @@ xmlhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		var Risingjokes = JSON.parse(this.responseText)			
 		
+		var subelem = document.createElement("p");
+		subelem.className="subreddit";
+		var subname = document.createTextNode(Risingjokes.data.children[0].data.subreddit); 
+		subelem.appendChild(document.createTextNode("r/"));
+		subelem.appendChild(subname);
+		
+		
+		var element = document.getElementById("joke");
+		element.appendChild(subelem);
+		
+		
 		var top=0;
 		var title="";
 		var selftext="";
