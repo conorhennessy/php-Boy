@@ -132,9 +132,11 @@
 		</div>
 	<script src="clock.js"> </script>
 	</div>
-	
-
-
+	<p>
+	<php?
+	echo getHostByName(getHostName());
+	?>
+	</p>
 </body>
 
 </html>
