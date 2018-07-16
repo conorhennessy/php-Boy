@@ -41,7 +41,7 @@
 		<td id="bus2time2"></td>
 	  </tr>
 	</table>
-	<!-- <script src="getbustimes.js"> </script> -->
+	 <script src="getbustimes.js"> </script> 
 	
 	</div>
 	
