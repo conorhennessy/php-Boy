@@ -44,6 +44,7 @@ function meridian(){
 		hours = date.getHours(),
 		am = document.getElementsByClassName("am")[0].classList,
 		pm = document.getElementsByClassName("pm")[0].classList;
+	
 		
 	(hours >= 12) ? pm.add("light-on") : am.add("light-on");
 	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");
@@ -53,16 +54,8 @@ function meridian(){
 function whatDay(){
 	var date = new Date(),
 	currentDay = date.getDay();
-	
-	//Statements to swap Mon to the first day of the week
-	if (currentDay == 1) { 
-		currentDay = 0; 
-	} else if (currentDay == 0) {
-		currentDay = 6;
-	} else { 
-		currentDay = currentDay - 1;
-	}
-	
+	if (currentDay == 0) { currentDay = 6; }
+	else { currentDay == currentDay - 1; }
 	var days = document.getElementsByClassName("day");
 
 	//iterates through all divs with a class of "day"
@@ -70,6 +63,6 @@ function whatDay(){
 		//list of classes in current div
 		var classArr = days[x].classList;
 		
-		(x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on");		
+		(classArr !== undefined) && ((x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on"));
 	}
 }
