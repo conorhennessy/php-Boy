@@ -10,7 +10,7 @@ xmlhttp.onreadystatechange = function() {
 			var timearr =[];
 			for(time in ToColOBJ.departures[bus]){		//each coming time
 				var time=ToColOBJ.departures[bus][time];
-				timearr.push(time.aimed_departure_time);
+				timearr.push(tConvert(time.aimed_departure_time));
 				
 				
 			}
@@ -51,4 +51,16 @@ function makebusline(line,timearr){
 		var element = document.getElementById("bus");
 		element.appendChild(businfo);
 	
+}
+
+function tConvert (time) {
+  // Check correct time format and split into components
+  time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+  if (time.length > 1) { // If time format correct
+    time = time.slice (1);  // Remove full string match value
+    //time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+    time[0] = +time[0] % 12 || 12; // Adjust hours
+  }
+  return time.join (''); // return adjusted time or original string
 }

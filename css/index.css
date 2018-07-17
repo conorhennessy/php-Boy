@@ -72,8 +72,9 @@ div.news {
 
 
 /* /Weather Piece/ */
-div.weather {
-	text-align: center;
+div.weatherpane {
+	
+	
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -83,22 +84,34 @@ div.weather {
 	width:500px;
 }
 
+div.weathertitle{
+	font-size: 15px;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding-bottom:8px;
+	text-align:center;
+	
+	
+}
+
 div.weather {
-	content-align:center;
+	content-align:bottom;
+	margin: 0 auto;
 	font-size: 12px;
 	font-weight: bold;
 	font-family: sans-serif;
+	text-align:center;
 	text-transform: uppercase;
 }
 
 div.weatherbox{
-	border: solid 5px #ffffff;
+	border: solid 3px #ffffff;
 	float:left;
 	height:100px;
 	padding: 3px;
 	margin-left:10px;
 	margin-right:10px;
-	
+	content-align:bottom;
 }
 
 p.temp{

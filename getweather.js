@@ -39,6 +39,7 @@ function makeday(temp,descrip){
 	var temptext = document.createTextNode(temp);
 	temppara.className="temp";
 	temppara.appendChild(temptext);
+	temppara.appendChild(document.createTextNode("°"));
 	daybox.appendChild(temppara);
 	
 	var descrippara = document.createElement("p");

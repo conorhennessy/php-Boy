@@ -26,8 +26,11 @@
 	</div>
 	<script src="getdadjoke.js"> </script>
 	
+	<div class="weatherpane">
+	<div class="weathertitle">WEATHER</div>
 	<div id="weather" class="weather">
 
+	</div>
 	</div>
 	<script src="getweather.js"> </script>
 	
