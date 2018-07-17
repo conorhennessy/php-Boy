@@ -54,10 +54,12 @@ function meridian(){
 function whatDay(){
 	var date = new Date(),
 	currentDay = date.getDay();
-	if (currentDay == 0) { currentDay = 6; }
-	else { currentDay == currentDay - 1; }
+	
+	
+	if(currentDay==-1){currentDay=6;}
+	else{currentDay=currentDay-1;}
+	
 	var days = document.getElementsByClassName("day");
-
 	//iterates through all divs with a class of "day"
 	for (x in days){
 		//list of classes in current div
