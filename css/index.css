@@ -39,29 +39,16 @@ div.bus p.tittle {
 	font-style: italic;
 }
 
-table.busTimes {
-	font-size: 20px;
-	border-width: 5px;
-	overflow: hidden;
-	word-break: break-all;
+div.businfo{
+	display:inline-block;
+	padding:5px;
+	vertical-align:top;
 }
 
-tr.heading{
-	font-weight: bold;
-}
-
-tr.bus{
-	font-weight: normal;
-}
-
-td.bus{
+div.busname{
 	font-family: sans-serif;
+	
 }
-
-td {
-	padding: 7px;
-}
-
 
 
 /* /News Piece/ */
