@@ -21,6 +21,10 @@ xmlhttp.onreadystatechange = function() {
 			
 		}
 	}
+	else{
+		var errorpara = document.createElement("p");
+		errorpara.appendChild(document.createTextNode("Error getting info"));
+	}
 };
 
 xmlhttp.send();

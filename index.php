@@ -2,7 +2,7 @@
 <html lang ="en">
 <head>
 	<meta charset="utf-8">
-	 <meta http-equiv="refresh" content="180; URL=http://localhost">
+	 <meta http-equiv="refresh" content="300; URL=http://localhost">
 	<link rel="stylesheet" href="css/index.css">
 	
 	<!-- Viewport sizing for all devices -->
