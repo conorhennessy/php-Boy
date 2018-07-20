@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: got an for this project?
+about: got an idea for this project???
 
 ---
 
