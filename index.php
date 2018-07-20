@@ -16,15 +16,17 @@
 	<div id="bus" class="bus">
 	<p class="tittle">Buses to Colchester:</p>
 	
-	
 	</div>
 	<script src="getbustimes.js"> </script> 
 	
 	<div id="joke" class="news">
 	
-	
 	</div>
 	<script src="getdadjoke.js"> </script>
+	
+	<div id="awwpane" class="aww">
+	</div>
+	<script src="getawwpic.js"></script>
 	
 	<div class="weatherpane">
 	<div class="weathertitle">WEATHER</div>
