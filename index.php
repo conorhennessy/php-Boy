@@ -15,12 +15,24 @@
 <body>
 	<div id="bus" class="bus">
 	<p class="tittle">Buses to Colchester:</p>
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 2c024daf752fa6fb81432eb561dc86b1cc35106b
 	</div>
 	<script src="getbustimes.js"> </script> 
 	
 	<div id="joke" class="news">
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 2c024daf752fa6fb81432eb561dc86b1cc35106b
 	</div>
 	<script src="getdadjoke.js"> </script>
+	
+	<div id="awwpane" class="aww">
+	</div>
+	<script src="getawwpic.js"></script>
 	
 	<div class="weatherpane">
 	<div class="weathertitle">WEATHER</div>

@@ -60,9 +60,28 @@ div.news {
     transform: translate(-1%,-1%); 
     padding: 15px;
     border: solid 5px #ffffff;
+	max-height:150px;
 }
 
 div.news {
+	font-size: 12px;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-transform: uppercase;
+}
+
+/* /r/aww Piece/ */
+div.aww {
+	text-align: center;
+    position: absolute;
+    top: 190px;
+    right: 20px;
+    transform: translate(-1%,-1%); 
+    padding: 15px;
+    border: solid 5px #ffffff;
+}
+
+div.aww {
 	font-size: 12px;
 	font-weight: bold;
 	font-family: sans-serif;
