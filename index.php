@@ -26,7 +26,7 @@
 	
 	<div id="awwpane" class="aww">
 	</div>
-	<script src="getawwpic.js"></script>
+	<!-- <script src="getawwpic.js"></script> -->
 	
 	<div class="weatherpane">
 	<div class="weathertitle">WEATHER</div>
