@@ -2,7 +2,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.open("GET", "http://transportapi.com/v3/uk/bus/stop/1500IM2533/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e", true);
 xmlhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-		document.write(this.status);
+		//document.write(this.status);
 		var ToColOBJ = JSON.parse(this.responseText)				
 		
 		for(var bus in ToColOBJ.departures){			//each bus line
