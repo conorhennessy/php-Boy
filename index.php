@@ -11,7 +11,7 @@
 	<title> php-boy </title>
 </head>
 
-<body>
+
 <body>
 	<div id="bus" class="bus">
 	<p class="tittle">Buses to Colchester:</p>
