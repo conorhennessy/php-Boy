@@ -10,7 +10,7 @@ function readTextFile(file)
             {
                 var allText = rawFile.responseText;
                 var lines = allText.split(/\r?\n/);
-				lines.splice(-8,8);			//shorten by 7
+				lines.splice(-8,8);			//shorten by 8
 				for(line in lines){
 					PrintTorrent(lines[line]);
 				}
@@ -27,7 +27,7 @@ function PrintTorrent(line){
 	
 	var vals = line.split(",");
 	
-	var type = document.createElement("p");
+	var type = document.createElement("p");								//terrible variable names
 	var typeval = document.createTextNode(vals[2]);
 	type.style.display="inline";
 	type.style.padding="5px";
@@ -41,7 +41,7 @@ function PrintTorrent(line){
 	seeds.style.padding="5px";
 	
 	var name = document.createElement("p");
-	var nametext = document.createTextNode(vals[0]);
+	var nametext = document.createTextNode(PadEnd(vals[0],5));
 	name.appendChild(nametext);
 	name.style.display="inline";
 	name.style.padding="5px";
@@ -60,6 +60,13 @@ function PrintTorrent(line){
 	element.appendChild(seeds);
 	element.appendChild(name);
 	element.appendChild(document.createElement("br"));
+}
+
+function PadEnd(string,targetlen){
+	while(string.length<targetlen){
+		string=string+"_";
+	}
+	return string;
 }
 
 readTextFile("zooqletopseeds.txt");	
