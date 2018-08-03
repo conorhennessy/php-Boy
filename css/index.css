@@ -78,7 +78,7 @@ div.torrents {
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 15px;
-    border: solid 5px #ffffff;
+    border: solid 2px #ffffff;
 }
 
 div.torrents {
@@ -88,6 +88,12 @@ div.torrents {
 	//text-transform: uppercase;
 }
 
+
+#sunriseTime{
+	font-family: 'Cousine', monospace;
+	font-size: 12px;
+	
+}
 
 
 /* /Weather Piece/ */
