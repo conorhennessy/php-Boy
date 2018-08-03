@@ -72,9 +72,9 @@ div.news {
 
 /* /r/aww Piece/ */
 div.aww {
-	text-align: center;
+	text-align: right;
     position: absolute;
-    top: 190px;
+    top: 180px;
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 15px;

@@ -24,9 +24,9 @@
 	</div>
 	<script src="getdadjoke.js"> </script>
 	
-	<div id="awwpane" class="aww">
+	<div id="torrentspane" class="aww">
 	</div>
-	<script src="getawwpic.js"></script>
+	<script src="readtorrentscrape.js"></script>
 	
 	<div class="weatherpane">
 	<div class="weathertitle">WEATHER</div>
