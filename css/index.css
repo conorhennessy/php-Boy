@@ -74,10 +74,10 @@ div.news {
 div.torrents {
 	text-align: right;
     position: absolute;
-    top: 120px;
+    top: 130px;
     right: 20px;
     transform: translate(-1%,-1%); 
-    padding: 15px;
+    padding: 3px;
     border: solid 2px #ffffff;
 }
 
