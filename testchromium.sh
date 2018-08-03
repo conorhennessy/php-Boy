@@ -5,6 +5,6 @@ do
 		sleep 2m
 	else
 		echo "chromium dead"
-		chromium-browser --kiosk http://localhost/
+		chromium-browser --kiosk --incognito http://localhost/
 	fi
 done
