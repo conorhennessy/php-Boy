@@ -21,6 +21,7 @@ function readTextFile(file)
 
 
 function PrintTorrent(line){
+	if(line==""){return 0;}
 	var element = document.getElementById("torrentspane");
 	
 	var vals = line.split(",");
