@@ -1,6 +1,6 @@
 /* http://www.color-hex.com/color-palette/62778 */
 
-
+@import url('https://fonts.googleapis.com/css?family=Cousine');
 /*DIGITAL CLOCK FONT*/
 @font-face{
  font-family:'digital-7';
@@ -70,8 +70,8 @@ div.news {
 	text-transform: uppercase;
 }
 
-/* /r/aww Piece/ */
-div.aww {
+/* torrents Piece/ */
+div.torrents {
 	text-align: right;
     position: absolute;
     top: 180px;
@@ -81,11 +81,11 @@ div.aww {
     border: solid 5px #ffffff;
 }
 
-div.aww {
+div.torrents {
+	font-family: 'Cousine', monospace;
 	font-size: 12px;
 	font-weight: bold;
-	font-family: sans-serif;
-	text-transform: uppercase;
+	//text-transform: uppercase;
 }
 
 

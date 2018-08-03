@@ -24,7 +24,7 @@
 	</div>
 	<script src="getdadjoke.js"> </script>
 	
-	<div id="torrentspane" class="aww">
+	<div id="torrentspane" class="torrents">
 	</div>
 	<script src="readtorrentscrape.js"></script>
 	
