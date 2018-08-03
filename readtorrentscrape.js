@@ -27,19 +27,11 @@ function PrintTorrent(line){
 	var vals = line.split(",");
 	
 	var type = document.createElement("p");
-	var typeval = document.createTextNode(vals[0]);
+	var typeval = document.createTextNode(vals[2]);
 	type.style.display="inline";
 	type.style.padding="5px";
 	type.appendChild(typeval);
-	if(vals[0]==="movie"){
-		type.style.color="#589EA5";
-	}
-	if(vals[0]==="game"){
-		type.style.color="#ffbd7b";
-	}
-	if(vals[0]==="tv"){
-		type.style.color="#6ec2b1";
-	}
+	
 	
 	var seeds = document.createElement("p");
 	var seedval = document.createTextNode(vals[1]);
@@ -48,10 +40,19 @@ function PrintTorrent(line){
 	seeds.style.padding="5px";
 	
 	var name = document.createElement("p");
-	var nametext = document.createTextNode(vals[2]);
+	var nametext = document.createTextNode(vals[0]);
 	name.appendChild(nametext);
 	name.style.display="inline";
 	name.style.padding="5px";
+	if(vals[0]==="movie"){
+		name.style.color="#589EA5";
+	}
+	if(vals[0]==="game"){
+		name.style.color="#ffbd7b";
+	}
+	if(vals[0]==="tv"){
+		name.style.color="#6ec2b1";
+	}
 	
 	
 	element.appendChild(type);
