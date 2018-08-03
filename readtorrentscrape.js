@@ -10,6 +10,7 @@ function readTextFile(file)
             {
                 var allText = rawFile.responseText;
                 var lines = allText.split(/\r?\n/);
+				lines.splice(-7,7);			//shorten by 7
 				for(line in lines){
 					PrintTorrent(lines[line]);
 				}
