@@ -1,4 +1,4 @@
-if [[ $(ps aux | grep -E 'chromium') ]]; then
+if [[ $(pidof chromium-browser) ]]; then
     echo "chromium running"
 else
     echo "chromium dead"
