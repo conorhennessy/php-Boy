@@ -1,42 +1,45 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "http://transportapi.com/v3/uk/bus/stop/1500IM2533/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e", true);
-xmlhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		//	document.write(this.status);
-		var ToColOBJ = JSON.parse(this.responseText)				
-		
-		for(var bus in ToColOBJ.departures){			//each bus line
+function getbusdata(stopid, direction){
+	var url = "http://transportapi.com/v3/uk/bus/stop/"+stopid+"/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e";
+	xmlhttp.open("GET", url, true);
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var BusDepartures = JSON.parse(this.responseText);
 			
-			var line=ToColOBJ.departures[bus][0].line;
-			var timearr =[];
-			for(time in ToColOBJ.departures[bus]){		//each coming time
-				var time=ToColOBJ.departures[bus][time];
-				timearr.push(tConvert(time.aimed_departure_time));
+			for(var bus in BusDepartures.departures){			//each bus line
+			
+				var line=BusDepartures.departures[bus][0].line;
+				var timearr =[];
+				for(time in BusDepartures.departures[bus]){		//each coming time
+					var time=BusDepartures.departures[bus][time];
+					timearr.push(tConvert(time.aimed_departure_time));
+					
+				}
 				
+				makebusline(line,timearr,direction);
 				
 			}
-			
-			//document.write(timearr);
-			
-			makebusline(line,timearr);
-			
 		}
-	}
-	else{
-		var errorpara = document.createElement("p");
-		errorpara.appendChild(document.createTextNode("Error getting info"));
-	}
-};
+		else{
+			var errorpara = document.createElement("p");
+			errorpara.appendChild(document.createTextNode("Error getting bus info!"));
+		}
+	};
+}
+
+getbusdata("1500IM2533", "busnorth");
+
+getbusdata("150032002012", "bussouth");
 
 xmlhttp.send();
 
-function makebusline(line,timearr){
+function makebusline(line,timearr,direction){
 		var businfo = document.createElement("div");
 		businfo.className="businfo";
 		var busname = document.createElement("div");
 		busname.className="busname";
 		businfo.appendChild(busname);
-		var busnametext = document.createTextNode(line)
+		var busnametext = document.createTextNode(line);
 		busname.appendChild(busnametext);
 		
 		
@@ -51,9 +54,7 @@ function makebusline(line,timearr){
 		}
 		
 		
-		
-		
-		var element = document.getElementById("bus");
+		var element = document.getElementById(direction);
 		element.appendChild(businfo);
 	
 }
