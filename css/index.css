@@ -15,7 +15,7 @@
 body {
 	color: #ffffff;
 	background-color: #ff7b7b;
-	font-family: 'digital-7', sans-serif;
+	font-family: 'Cousine', monospace;
 }
 
 
@@ -50,6 +50,7 @@ p.tittle {
 }
 
 div.businfo{
+	font-family: 'digital-7', sans-serif;
 	display:inline-block;
 	padding:5px;
 	vertical-align:top;
@@ -190,6 +191,7 @@ p.temp{
 
 /* /Date and clock piece/ */
 div.dateAndClock {
+	font-family: 'digital-7', sans-serif;
 	text-align: center;
     position: absolute;
     bottom: 20px;
