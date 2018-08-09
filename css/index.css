@@ -110,6 +110,28 @@ div.torrents {
 }
 
 
+/* news Piece/ */
+#news {
+	text-align: left;
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    transform: translate(-1%,-1%); 
+    padding: 3px;
+    border: solid 2px #ffffff;
+}
+
+#news {
+	font-family: 'Cousine', monospace;
+	font-size: 12px;
+	font-weight: bold;
+	//text-transform: uppercase;
+}
+
+
+
+
+
 #sunriseTime{
 	font-family: 'Cousine', monospace;
 	font-size: 12px;
