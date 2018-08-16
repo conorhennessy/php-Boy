@@ -7,6 +7,27 @@
  src: url('../fonts/digital-7.ttf');
 }
 
+
+
+@-webkit-keyframes BackgroundColour {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BackgroundColour {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BackgroundColour { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+	
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -14,7 +35,13 @@
 
 body {
 	color: #ffffff;
-	background-color: #ff7b7b;
+	background:#ff7b7b;
+	//background: linear-gradient(270deg, #5a168e, #ef6bdc);
+	//background-size: 400% 400%;
+
+	-webkit-animation: BackgroundColour 30s ease infinite;
+	-moz-animation: BackgroundColour 30s ease infinite;
+	animation: BackgroundColour 30s ease infinite; */
 	font-family: 'Cousine', monospace;
 }
 
@@ -130,7 +157,11 @@ div.torrents {
 }
 
 
-
+#collections{
+	background:#000000;
+	bottom:20px;
+	left:400px;
+}
 
 
 #sunriseTime{

@@ -33,7 +33,7 @@ var n = date.getDay();
 var weeknum = getWeekNumber(date);
 
 
-//Im pretty sure its always a wednesday
+//Our collection day is wednesday
 if(n==3){
 	
 	//odd is green, even is blue
