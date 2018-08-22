@@ -19,9 +19,15 @@ function PrintCollections(week){
 	
 	if(week=="green"){
 		div.appendChild(document.createTextNode("green week"));
+		var desc=document.createElement("p");
+		div.appendChild(desc);
+		desc.appendChild(document.createTextNode("rubbish,glass,metal"));
 	}
 	else{
 		div.appendChild(document.createTextNode("blue week"));
+		var desc=document.createElement("p");
+		div.appendChild(desc);
+		desc.appendChild(document.createTextNode("paper,plastics"));
 	}
 	
 	element.appendChild(div);
@@ -38,12 +44,12 @@ if(n==3){
 	
 	//odd is green, even is blue
 	if(weeknum%2==0){
-		document.write("its a blue week");
+		//document.write("its a blue week");
 		//rubbish, glass, metal
 		PrintCollections("blue");
 	}
 	else{
-		document.write("its a green week");
+		//document.write("its a green week");
 		//paper, plastics
 		PrintCollections("green");
 	}
