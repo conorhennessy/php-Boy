@@ -13,14 +13,14 @@ xmlhttp.onreadystatechange = function() {
 			if(score>top){
 				top=score
 				title=page.data.children[post].data.title;
-				//imglink=JSON.stringify(page.data.children[post].data);
-				
+				imglink=page.data.children[post].data;
+				console.log(imglink);
 				author=page.data.children[post].data.author;
 			}
 			
 		}
 		
-		addimage(title,imglink,author)
+		addimage(title,imglink,author);
 		
 	}
 };
@@ -33,7 +33,6 @@ function addimage(title,imglink,author){
 	
 	var container =document.createElement("div");
 	
-	
 	var txt = document.createTextNode(title);
 	container.appendChild(txt);
 	container.className ="awwbox";
@@ -42,6 +41,8 @@ function addimage(title,imglink,author){
 	
 	var awwpic = document.createElement("img");
 	awwpic.src=imglink;
+	
+	
 	
 	container.appendChild(awwpic);
 	
