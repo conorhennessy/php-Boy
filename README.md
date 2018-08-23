@@ -13,13 +13,15 @@ The line ./superscript
 was added to .bashrc
 
 superscript was created and reads:
+
+sudo java -jar /var/www/html/ZooqleTopSeedstofile.jar &
 /var/www/html/UpdateFromGit.sh
 /var/www/html/keepchromiumopen.sh
 
 
  
 on login the pi now, updates from git and opens chromium (reopens if it crashes)
-and and opens a java program to scrape/data
+and opens a java program to scrape/data
  
 
 
