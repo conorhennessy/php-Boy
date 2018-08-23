@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Pulling from Git"
 cd /var/www/html/
 sudo git fetch --all
