@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang ="en">
+<?php
+	shell_exec("java -jar /var/www/html/ZooqleTopsSeedstofile.jar");
+?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="refresh" content="600" URL="http://localhost">
