@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang ="en">
 <?php
-	shell_exec("java -jar /var/www/html/ZooqleTopsSeedstofile.jar");
+	shell_exec("sudo java -jar /var/www/html/ZooqleTopsSeedstofile.jar");
 ?>
 <head>
 	<meta charset="utf-8">
