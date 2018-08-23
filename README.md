@@ -1,21 +1,27 @@
 # php-Boy
 An in house wall diplay for general information
 
-#Robustness update
+
+requires raspberry pi with java and chromium
+
 
 @lxterminal was added to
 ~/.config/lxsession/LXDE-pi/autostart
 to create a terminal at startup
 
+The line ./superscript
+was added to .bashrc
+
 superscript was created and reads:
+
+sudo java -jar /var/www/html/ZooqleTopSeedstofile.jar &
 /var/www/html/UpdateFromGit.sh
 /var/www/html/keepchromiumopen.sh
 
-The line ./superscript
-was added to .bashrc
+
  
 on login the pi now, updates from git and opens chromium (reopens if it crashes)
- 
+and opens a java program to scrape/data
  
 
 
