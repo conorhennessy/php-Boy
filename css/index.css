@@ -127,6 +127,7 @@ div.torrents {
     position: absolute;
     top: 130px;
     right: 20px;
+	max-width:30%;
     transform: translate(-1%,-1%); 
     padding: 3px;
     border: solid 5px #ffffff;
@@ -146,7 +147,7 @@ div.torrents {
     position: absolute;
     top: 130px;
     left: 20px;
-	max-width:300px;
+	max-width:40%
     transform: translate(-1%,-1%); 
     padding: 5px;
     border: solid 5px #ffffff;
