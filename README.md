@@ -1,7 +1,25 @@
 # php-Boy
 An in house wall diplay for general information
 
-![alt text](https://raw.githubusercontent.com/conorhennessy/php-Boy/master/picture.jpg)
+#Robustness update
+
+@lxterminal was added to
+~/.config/lxsession/LXDE-pi/autostart
+to create a terminal at startup
+
+superscript was created and reads:
+/var/www/html/UpdateFromGit.sh
+/var/www/html/keepchromiumopen.sh
+
+The line ./superscript
+was added to .bashrc
+ 
+on login the pi now, updates from git and opens chromium (reopens if it crashes)
+ 
+ 
+
+
+
 ![alt text](https://raw.githubusercontent.com/conorhennessy/php-Boy/master/picture2.jpg)
 self-updates from github using crontab <br>
 keep the screen on:
