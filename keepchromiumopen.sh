@@ -1,3 +1,5 @@
+#!/bin/bash
+
 while true
 do
 	if [[ $(pidof /usr/lib/chromium-browser/chromium-browser) ]]; then
