@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "waiting to ensure network"
-sleep 10
 echo "Pulling from Git"
 cd /var/www/html/
 sudo git fetch --all
