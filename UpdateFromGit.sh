@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Pulling from Git"
+wait 5
 cd /var/www/html/
 sudo git fetch --all
 sudo git reset --hard origin/master
