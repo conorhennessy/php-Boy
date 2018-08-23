@@ -8,7 +8,7 @@ xmlhttp.onreadystatechange = function() {
 		var numResults=page.totalResults;
 		
 		var i;
-		for (i = 0; i < numResults; i++) { 
+		for (i = 0; i < numResults-2; i++) { 
 			
 			PrintNews(page.articles[i]);
 			
