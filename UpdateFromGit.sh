@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 10
 echo "Pulling from Git"
 cd /var/www/html/
 sudo git fetch --all
@@ -9,4 +10,4 @@ date >> /home/pi/Desktop/Lastupdate.txt
 sudo git pull origin master >> /home/pi/Desktop/Lastupdate.txt
 sudo chmod +x /var/www/html/*.sh
 killall chromium-browser
-sudo /var/www/html/keepchromiumopen.sh
+sudo /var/www/html/keepchromiumopen.sh >> /home/pi/Desktop/Lastupdate.txt

@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep(5)
+sleep 5
 while true
 do
 	if [[ $(pidof /usr/lib/chromium-browser/chromium-browser) ]]; then
