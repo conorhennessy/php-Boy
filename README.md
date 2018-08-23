@@ -1,6 +1,9 @@
 # php-Boy
 An in house wall diplay for general information
 
+
+requires raspberry pi with java and chromium
+
 #Robustness update
 
 @lxterminal was added to
