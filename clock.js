@@ -45,8 +45,9 @@ function meridian(){
 	am = document.getElementsByClassName("am")[0].classList;
 	pm = document.getElementsByClassName("pm")[0].classList;
 
-	(hours >= 12) ? pm.add("light-on") : am.add("light-on");
-	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");
+	
+	(hours >= 12) ? pm.add("light-on") : am.add("light-on");				//am
+	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");           ///pm
 }
 
 //lights up what day of the week it is

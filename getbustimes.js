@@ -1,6 +1,6 @@
 function getbusdata(stopid, direction){
 	var xmlhttp = new XMLHttpRequest();
-	var url = "http://transportapi.com/v3/uk/bus/stop/"+stopid+"/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e";
+	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopid+"/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {

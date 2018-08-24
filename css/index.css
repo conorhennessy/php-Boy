@@ -243,7 +243,7 @@ div.dateAndClock {
 }
 
 .light-on {  /*Changes color of text to appear like its "on"*/
-	color: #ffffff;
+	color: #ffffff !important;
 }
 
 /* Days of the week */
