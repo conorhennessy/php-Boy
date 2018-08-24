@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "http://www.reddit.com/r/dadjokes/rising.json", true);
+xmlhttp.open("GET", "https://www.reddit.com/r/dadjokes/rising.json", true);
 xmlhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		var Risingjokes = JSON.parse(this.responseText)			
@@ -10,10 +10,8 @@ xmlhttp.onreadystatechange = function() {
 		subelem.appendChild(document.createTextNode("r/"));
 		subelem.appendChild(subname);
 		
-		
 		var element = document.getElementById("joke");
 		element.appendChild(subelem);
-		
 		
 		var top=0;
 		var title="";
