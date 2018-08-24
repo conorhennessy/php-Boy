@@ -1,11 +1,11 @@
 //invokes functions as soon as window loads
 window.onload = function(){
 	time();
-	meridian();
+	//meridian();
 	whatDay();
 	setInterval(function(){
 		time();
-		meridian();
+		//meridian();
 		whatDay();
 	}, 1000);
 };
