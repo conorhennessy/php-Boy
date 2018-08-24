@@ -83,7 +83,6 @@ div.bussouthbox {
     left: 250px;
     transform: translate(-1%,-1%); 
     padding: 8px;
-    border: solid 5px #ffffff;
 }
 
 p.tittle {
@@ -115,7 +114,6 @@ div.dadjoke {
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 15px;
-    border: solid 5px #ffffff;
 	max-height:150px;
 }
 
@@ -147,7 +145,6 @@ div.torrents {
 	max-height:420px;
     transform: translate(-1%,-1%); 
     padding: 3px;
-    border: solid 5px #ffffff;
 }
 
 div.torrents {
@@ -168,7 +165,6 @@ div.torrents {
 	max-height:420px;
     transform: translate(-1%,-1%); 
     padding: 5px;
-    border: solid 5px #ffffff;
 	font-family: 'Cousine', monospace;
 	font-size: 12px;
 	font-weight: bold;
@@ -181,7 +177,6 @@ div.torrents {
 	bottom:50px;
 	left:50%;
 	text-align: center;
-	border: solid 5px #ffffff;
 }
 
 
@@ -200,7 +195,6 @@ div.weatherpane {
     left: 20px;
     transform: translate(-1%,-1%); 
     padding: 8px;
-    border: solid 5px #ffffff;
 	width:500px;
 }
 
@@ -223,7 +217,6 @@ div.weather {
 }
 
 div.weatherbox{
-	border: solid 3px #ffffff;
 	float:left;
 	height:100px;
 	padding-right: 3px;
@@ -247,7 +240,6 @@ div.dateAndClock {
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 8px;
-    border: solid 5px #ffffff;
 }
 
 .light-on {  /*Changes color of text to appear like its "on"*/
