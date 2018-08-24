@@ -5,18 +5,17 @@ An in house wall diplay for general information
 requires raspberry pi with java and chromium
 
 
-@lxterminal was added to
-~/.config/lxsession/LXDE-pi/autostart
+`@lxterminal` was added to
+`~/.config/lxsession/LXDE-pi/autostart`
 to create a terminal at startup
 
-The line ./superscript
-was added to .bashrc
+The line `./superscript`
+was added to `~.bashrc`
 
-superscript was created and reads:
-
-sudo java -jar /var/www/html/ZooqleTopSeedstofile.jar &
+a file called superscript was created and reads:
+`sudo java -jar /var/www/html/ZooqleTopSeedstofile.jar &
 /var/www/html/UpdateFromGit.sh
-/var/www/html/keepchromiumopen.sh
+/var/www/html/keepchromiumopen.sh`
 
 
  
