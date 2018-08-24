@@ -20,7 +20,7 @@ a file called superscript was created and reads:
 
  
 on login the pi now, updates from git and opens chromium (reopens if it crashes)
-and opens a java program to scrape/data
+and opens a java program to scrape/process data
  
 
 
