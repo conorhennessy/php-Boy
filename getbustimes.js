@@ -1,5 +1,5 @@
-var xmlhttp = new XMLHttpRequest();
 function getbusdata(stopid, direction){
+	var xmlhttp = new XMLHttpRequest();
 	var url = "http://transportapi.com/v3/uk/bus/stop/"+stopid+"/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function() {
@@ -25,13 +25,12 @@ function getbusdata(stopid, direction){
 			errorpara.appendChild(document.createTextNode("Error getting bus info!"));
 		}
 	};
+	xmlhttp.send();
 }
 
 getbusdata("1500IM2533", "busnorth");
 
 getbusdata("150032002012", "bussouth");
-
-xmlhttp.send();
 
 function makebusline(line,timearr,direction){
 		var businfo = document.createElement("div");
