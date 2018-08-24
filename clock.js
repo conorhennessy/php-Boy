@@ -1,11 +1,11 @@
 //invokes functions as soon as window loads
 window.onload = function(){
 	time();
-	//meridian();
+	meridian();
 	whatDay();
 	setInterval(function(){
 		time();
-		//meridian();
+		meridian();
 		whatDay();
 	}, 1000);
 };
@@ -44,8 +44,7 @@ function meridian(){
 		hours = date.getHours(),
 		am = document.getElementsByClassName("am")[0].classList,
 		pm = document.getElementsByClassName("pm")[0].classList;
-	
-		
+
 	(hours >= 12) ? pm.add("light-on") : am.add("light-on");
 	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");
 }
@@ -61,7 +60,7 @@ function whatDay(){
 	
 	var days = document.getElementsByClassName("day");
 	//iterates through all divs with a class of "day"
-	for (x in days){
+	for (var x in days){
 		//list of classes in current div
 		var classArr = days[x].classList;
 		
