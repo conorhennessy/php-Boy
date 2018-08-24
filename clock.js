@@ -41,9 +41,9 @@ function addZero (val){
 //lights up either am or pm on clock
 function meridian(){
 	var date = new Date(),
-		hours = date.getHours(),
-		am = document.getElementsByClassName("am")[0].classList,
-		pm = document.getElementsByClassName("pm")[0].classList;
+		hours = date.getHours();
+	am = document.getElementsByClassName("am")[0].classList;
+	pm = document.getElementsByClassName("pm")[0].classList;
 
 	(hours >= 12) ? pm.add("light-on") : am.add("light-on");
 	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");

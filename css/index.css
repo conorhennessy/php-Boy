@@ -297,7 +297,7 @@ div.meridian div p {
 }
 
 .am, .pm {
-	color: #ff9595;
+	color: rgba(255, 255, 255, 0.2);
 }
 
 /* Sunrise, sunset time piece*/
