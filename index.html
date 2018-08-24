@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang ="en">
-
+<html>
 <head>
+<link rel="stylesheet" type="text/css" href="grad.css">
 	<meta charset="utf-8">
 	<meta http-equiv="refresh" content="600" URL="http://localhost">
 	<link rel="stylesheet" href="css/index.css">
@@ -9,35 +8,35 @@
 	<!-- Viewport sizing for all devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<title> php-boy </title>
+	<title>php-boy</title>
 </head>
 
 
 <body>
-	<div id="busnorth" class="busnorthbox">
+	<div id="busnorth" class="busnorthbox bordered">
 	<p class="tittle">Buses to Colchester:</p>
 
 	</div>
 	
-	<div id="bussouth" class="bussouthbox">
+	<div id="bussouth" class="bussouthbox bordered">
 	<p class="tittle">Buses to Wivenhoe:</p>
 
 	</div>
 	<script src="getbustimes.js"> </script> 
 	
 	
-	<div id="joke" class="dadjoke">
+	<div id="joke" class="dadjoke bordered">
 
 	</div>
 	<script src="getdadjoke.js"> </script>
 	
 	
-	<div id="torrentspane" class="torrents">
+	<div id="torrentspane" class="torrents bordered">
 	</div>
 	<script src="readtorrentscrape.js"></script>
 	
 	
-	<div class="weatherpane">
+	<div class="weatherpane bordered">
 	<div class="weathertitle">WEATHER</div>
 	<div id="weather" class="weather">
 
@@ -46,7 +45,7 @@
 	<script src="getweather.js"> </script>
 	
 	
-	<div class="dateAndClock">
+	<div class="dateAndClock bordered">
 		<!-- Day of the week -->
 		<div class="days">
 
@@ -108,18 +107,7 @@
 			</div>
 			
 			<!-- AM or PM meridian-->
-			<div class="meridian">
-
-				<!-- AM -->
-				<div>
-					<p class="am">am</p>
-				</div>
-
-				<!-- PM -->
-				<div>
-					<p class="pm">pm</p>
-				</div>
-			</div>
+			
 		</div>
 	<script src="clock.js"> </script>
 	
@@ -129,18 +117,19 @@
 	
 	</div>
 	
-	<div id="news">
+	<div id="news" class="bordered">
 	</div>
 	<script src="TopArticlesBBC.js"></script>
 	
 	<div id="collections">
 	</div>
-	<script src="CollectionDay.js"> </script>
+	<script src="CollectionDay.js" class="bordered"> </script>
 	
 	<div id="localIP">
 	</div>
 	<script src="GetLocalIP.js"></script>
-	
+
+
 </body>
 
 </html>

@@ -39,6 +39,7 @@ function addZero (val){
 }
 
 //lights up either am or pm on clock
+/*
 function meridian(){
 	var date = new Date(),
 		hours = date.getHours(),
@@ -49,6 +50,7 @@ function meridian(){
 	(hours >= 12) ? pm.add("light-on") : am.add("light-on");
 	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");
 }
+*/
 
 //lights up what day of the week it is
 function whatDay(){

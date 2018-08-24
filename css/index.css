@@ -34,17 +34,33 @@
 }
 
 
-
+/*
 body {
-	color: #ffffff;
-	background:#ff7b7b;
-	font-family: 'Cousine', monospace;
-	//background: linear-gradient(270deg, #5a168e, #ef6bdc);
-	//background-size: 400% 400%;
 
+	background:#ff7b7b;
+	//old color
+}
+*/
+
+.bordered{
+	border:solid 3px #ffffff;
+}
+
+body{
+	color: #ffffff;
+	background: linear-gradient(270deg, #5a168e, #ef6bdc);
+	background-size: 400% 400%;
+	font-family: 'Cousine', monospace;
 	-webkit-animation: BackgroundColour 30s ease infinite;
 	-moz-animation: BackgroundColour 30s ease infinite;
-	animation: BackgroundColour 30s ease infinite; */
+	animation: BackgroundColour 30s ease infinite; 
+	
+}
+
+#grad{
+	
+	background: linear-gradient(270deg, #5a168e, #ef6bdc);
+	z-index:-1;
 }
 
 
@@ -56,8 +72,8 @@ div.busnorthbox {
     top: 20px;
     left: 15px;
     transform: translate(-1%,-1%); 
-    padding: 15px;
-    border: solid 5px #ffffff;
+    padding: 8px;
+ 
 }
 
 div.bussouthbox {
@@ -66,7 +82,7 @@ div.bussouthbox {
     top: 20px;
     left: 250px;
     transform: translate(-1%,-1%); 
-    padding: 15px;
+    padding: 8px;
     border: solid 5px #ffffff;
 }
 
@@ -125,7 +141,7 @@ p.jokeauthor{
 div.torrents {
 	text-align: right;
     position: absolute;
-    top: 130px;
+    top: 140px;
     right: 20px;
 	max-width:30%;
 	max-height:420px;
@@ -138,7 +154,7 @@ div.torrents {
 	font-family: 'Cousine', monospace;
 	font-size: 12px;
 	font-weight: bold;
-	//text-transform: uppercase;
+	
 }
 
 
@@ -146,7 +162,7 @@ div.torrents {
 #news {
 	text-align: left;
     position: absolute;
-    top: 130px;
+    top: 140px;
     left: 20px;
 	max-width:600px;
 	max-height:420px;
@@ -156,13 +172,11 @@ div.torrents {
 	font-family: 'Cousine', monospace;
 	font-size: 12px;
 	font-weight: bold;
-	//text-transform: uppercase;
 }
 
 
 /* /Rubbish Collection Piece/ */
 #collections{
-	//background:#000000;
 	position:absolute;
 	bottom:50px;
 	left:50%;
@@ -174,7 +188,7 @@ div.torrents {
 #localIP{
 	position: absolute;
 	bottom:8px;
-	left:50%;
+	left:46%;
 	
 }
 
@@ -199,7 +213,7 @@ div.weathertitle{
 }
 
 div.weather {
-	content-align:bottom;
+	
 	margin: 0 auto;
 	font-size: 12px;
 	font-weight: bold;
@@ -216,7 +230,7 @@ div.weatherbox{
 	padding-left: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
-	content-align:bottom;
+	
 }
 
 p.temp{
@@ -243,7 +257,7 @@ div.dateAndClock {
 /* Days of the week */
 div.days {
 	margin: 0 auto;
-	color: #ff9595;
+	color: rgba(255, 255, 255, 0.2);
 }
 
 div.days .day {
@@ -271,7 +285,7 @@ div.clock div p{
 }
 
 div.clock .placeholder {
-	color: #ff9595;
+	color: rgba(255, 255, 255, 0.2);
 	position: absolute;
 	top: 0;
 	z-index: 50;
