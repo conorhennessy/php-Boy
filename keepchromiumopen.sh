@@ -8,6 +8,6 @@ do
 	else
 		echo "chromium dead"
 		
-		chromium-browser --kiosk --incognito http://localhost/
+		chromium-browser --kiosk --incognito http://localhost/ &
 	fi
 done

@@ -11,8 +11,9 @@ function readTextFile(file)
                 var allText = rawFile.responseText;
                 var lines = allText.split(/\r?\n/);
 				lines.splice(-8,8);			//shorten by 8
-				for(line in lines){
-					PrintTorrent(lines[line]);
+				var i;
+				for(i=0; i<lines.length-3; i++){
+					PrintTorrent(lines[i]);
 				}
             }
         }
