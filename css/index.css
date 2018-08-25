@@ -46,6 +46,14 @@ body {
 	border:solid 3px #ffffff;
 }
 
+div.title{
+	font-size: 15px;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding-bottom:8px;
+	text-align:center;
+}
+
 body{
 	color: #ffffff;
 	background: linear-gradient(270deg, #5a168e, #ef6bdc);
@@ -180,6 +188,7 @@ div.torrents {
 }
 
 
+/* /Local IP Piece/ */
 #localIP{
 	position: absolute;
 	bottom:8px;
@@ -196,14 +205,6 @@ div.weatherpane {
     transform: translate(-1%,-1%); 
     padding: 8px;
 	width:500px;
-}
-
-div.weathertitle{
-	font-size: 15px;
-	font-weight: bold;
-	font-family: sans-serif;
-	padding-bottom:8px;
-	text-align:center;
 }
 
 div.weather {
