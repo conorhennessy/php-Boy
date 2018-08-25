@@ -44,7 +44,6 @@ function meridian(){
 		hours = date.getHours();
 	am = document.getElementsByClassName("am")[0].classList;
 	pm = document.getElementsByClassName("pm")[0].classList;
-
 	
 	(hours >= 12) ? pm.add("light-on") : am.add("light-on");				//am
 	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");           ///pm
@@ -54,7 +53,6 @@ function meridian(){
 function whatDay(){
 	var date = new Date(),
 	currentDay = date.getDay();
-	
 	
 	if(currentDay==-1){currentDay=6;}
 	else{currentDay=currentDay-1;}
