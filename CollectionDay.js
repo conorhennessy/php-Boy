@@ -16,17 +16,17 @@ function getWeekNumber(d) {
 function PrintCollection(date, week) {
     // Show what this weeks collection is...
     weekStyle = document.getElementsByClassName("week")[0].classList;
+    document.getElementsByClassName("week")[0].innerHTML = week + " week";
     if (week == "green") {
-        document.getElementsByClassName("week")[0].innerHTML = "green week";
         document.getElementsByClassName("items")[0].innerHTML = "rubbish, glass & metal";
         weekStyle.add("green-week");  //make it green
     }
     else {
-        document.getElementsByClassName("week")[0].innerHTML = "blue week";
         document.getElementsByClassName("items")[0].innerHTML = "paper & plastics";
         weekStyle.add("blue-week");   //make it blue   ooooh
     }
 
+    //  Show prompt before and on collection days
     var n = date.getDay();
 
     if (n == 2) {
