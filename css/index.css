@@ -180,20 +180,34 @@ div.torrents {
 
 
 /* /Rubbish Collection Piece/ */
-#collections{
+#collection{
 	position:absolute;
-	bottom:50px;
-	left:50%;
+	bottom:20px;
+	left: 638px;
 	text-align: center;
+	padding: 8px;
+	line-height: 2.5;
+}
+
+.green-week{
+	background-color: #88B04B;
+}
+
+.blue-week{
+	background-color: #92B6D5;
+}
+
+p.prompt{
+	background-color: #ff6961 ;
 }
 
 
 /* /Local IP Piece/ */
 #localIP{
 	position: absolute;
-	bottom:8px;
-	left:46%;
-	
+	bottom: 6px;
+	left: 46%;
+	font-size: 12px;
 }
 
 
