@@ -204,6 +204,7 @@ p.prompt{
 
 /* /Local IP Piece/ */
 #localIP{
+	color:#ffffff !important;
 	position: absolute;
 	bottom: 6px;
 	left: 46%;
