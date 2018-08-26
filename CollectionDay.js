@@ -14,6 +14,7 @@ function getWeekNumber(d) {
 
 
 function PrintCollection(date, week) {
+	document.getElementsByClassName("title")[0].innerHTML = "RUBBISH COLLECTION";
     // Show what this weeks collection is...
     weekStyle = document.getElementsByClassName("week")[0].classList;
     document.getElementsByClassName("week")[0].innerHTML = week + " week";
@@ -51,4 +52,8 @@ if (day == 2 || day == 3){
 		//Green = paper, plastics
 		PrintCollection(date, "green");
 	}
+}
+else {
+	collectionBox = document.getElementsByClassName("collection")[0].classList;
+	collectionBox.remove("bordered");
 }
