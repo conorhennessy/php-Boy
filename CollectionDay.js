@@ -27,25 +27,28 @@ function PrintCollection(date, week) {
     }
 
     //  Show prompt before and on collection days
-    var n = date.getDay();
+    var day = date.getDay();
 
-    if (n == 2) {
+    if (day == 2) {
         document.getElementsByClassName("prompt")[0].innerHTML = "It's collection day tomorrow!";
     }
-    if (n == 3) {
+    if (day == 3) {
         document.getElementsByClassName("prompt")[0].innerHTML = "It's collection day today!";
     }
 }
 
 var date = new Date();
 var weeknum = getWeekNumber(date);
+var day = date.getDay();
 
 //odd is green, even is blue
-if(weeknum % 2 == 0){
-    //Blue = rubbish, glass, metal
-    PrintCollection(date, "blue");
-}
-else{
-    //Green = paper, plastics
-    PrintCollection(date, "green");
+if (day == 2 || day == 3){
+	if(weeknum % 2 == 0){
+		//Blue = rubbish, glass, metal
+		PrintCollection(date, "blue");
+	}
+	else{
+		//Green = paper, plastics
+		PrintCollection(date, "green");
+	}
 }
