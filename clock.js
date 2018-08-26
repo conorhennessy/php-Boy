@@ -55,6 +55,7 @@ function whatDay(){
 	currentDay = date.getDay();
 	
 	if(currentDay==-1){currentDay=6;}
+	if(currentDay==0){currentDay=6}
 	else{currentDay=currentDay-1;}
 	
 	var days = document.getElementsByClassName("day");
