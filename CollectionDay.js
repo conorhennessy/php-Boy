@@ -14,7 +14,7 @@ function getWeekNumber(d) {
 
 
 function PrintCollection(date, week) {
-	document.getElementsByClassName("title")[0].innerHTML = "RUBBISH COLLECTION";
+	//document.getElementsByClassName("title")[0].innerHTML = "RUBBISH COLLECTION";
     // Show what this weeks collection is...
     weekStyle = document.getElementsByClassName("week")[0].classList;
     document.getElementsByClassName("week")[0].innerHTML = week + " week";
