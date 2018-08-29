@@ -90,10 +90,10 @@ function makeday(displaycount,temp,descrip,humidity){
 		daybox.appendChild(document.createTextNode("5pm tmoz"));
 	}
 	if(displaycount==3){
-		daybox.appendChild(document.createTextNode("9am tmoz+1"));
+		daybox.appendChild(document.createTextNode("9am "+ShortDayPlusn(2)));
 	}
 	if(displaycount==4){
-		daybox.appendChild(document.createTextNode("5pm tmoz+1"));
+		daybox.appendChild(document.createTextNode("5pm "+ShortDayPlusn(2)));
 	}
 	
 	
@@ -101,3 +101,43 @@ function makeday(displaycount,temp,descrip,humidity){
 	element.appendChild(daybox);
 	
 }
+
+
+function ShortDayPlusn(n){
+	var d = new Date();
+	var Dayint = d.getDay();
+	var num=Dayint+n;
+	var day="";
+	
+	switch (num) {
+		case 0:
+			day = "Sunday";
+			break;
+		case 1:
+			day = "Monday";
+			break;
+		case 2:
+			day = "Tuesday";
+			break;
+		case 3:
+			day = "Wednesday";
+			break;
+		case 4:
+			day = "Thursday";
+			break;
+		case 5:
+			day = "Friday";
+			break;
+		case 6:
+			day = "Saturday";
+			break;
+		case 7:
+			day = "Sunday";
+			break;
+		case 8:
+			day = "Monday";		
+	}
+	
+	return day;
+}
+	
