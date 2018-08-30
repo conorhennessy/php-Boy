@@ -111,31 +111,31 @@ function ShortDayPlusn(n){
 	
 	switch (num) {
 		case 0:
-			day = "Sunday";
+			day = "Sun";
 			break;
 		case 1:
-			day = "Monday";
+			day = "Mon";
 			break;
 		case 2:
-			day = "Tuesday";
+			day = "Tues";
 			break;
 		case 3:
-			day = "Wednesday";
+			day = "Wed";
 			break;
 		case 4:
-			day = "Thursday";
+			day = "Thurs";
 			break;
 		case 5:
-			day = "Friday";
+			day = "Fri";
 			break;
 		case 6:
-			day = "Saturday";
+			day = "Sat";
 			break;
 		case 7:
-			day = "Sunday";
+			day = "Sun";
 			break;
 		case 8:
-			day = "Monday";		
+			day = "Mon";		
 	}
 	
 	return day;
