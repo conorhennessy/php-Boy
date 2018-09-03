@@ -1,18 +1,44 @@
-function getbusdata(stopID,target,line){
+function getbusdata(stopID,target,lines){
 	var xmlhttp = new XMLHttpRequest();
-	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id=e13064f1&app_key=3cb245dca58e6f4cfa9050fe2fed5f30";
+	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id=d1b99ec5&app_key=aa04717447ce3425a78c2d3874b92639";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			var BusDepartures = JSON.parse(this.responseText);
 			
+			
+    
+			
+			
 			var times =[];
-			for(var i=0; i<BusDepartures.departures[line].length; i++){
+			
+			for(var i=0; i<=lines.length;i++){
 				
-				var time = BusDepartures.departures[line][i].expected_departure_time;
-				times.push(time);
 				
+				line=lines[i]
+				console.log(line);
+				
+				try{
+					BusDepartures.departures[line].length;
+				}
+				catch(err){
+					continue;
+				}
+				
+					for(var i=0; i<BusDepartures.departures[line].length; i++){
+						
+						var time = BusDepartures.departures[line][i].expected_departure_time;
+						times.push(time);
+						
+					}
 			}
+			console.log(times);
+			if(times.length==0){
+				var element=document.getElementById(target);
+				element.appendChild(document.createTextNode("no more buses"));
+				return 0;
+			}
+			
 			var date = new Date();
 			var hours = date.getHours();
 			var minutes = date.getMinutes();
@@ -30,7 +56,13 @@ function getbusdata(stopID,target,line){
 			PrintBusStop(minsUntil,times,target);
 			
 			
+			
 		}
+		if(this.readyState==4 && this.status==403){
+			var element=document.getElementById(target);
+			element.appendChild(document.createTextNode("out of requests"));
+		}
+		
 	};
 	xmlhttp.send();
 }
@@ -89,8 +121,8 @@ function tConvert (time) {
 
 
 
-getbusdata("1500IM2533", "ToColchester","62");
-getbusdata("150032002012","ToWivenhoe","61");
+getbusdata("1500IM2533", "ToColchester",["62","62B"]);
+getbusdata("150032002012","ToWivenhoe",["61"]);
 
 
 

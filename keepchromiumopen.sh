@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 5
 echo "keeping chromium open"
 while true
 do
