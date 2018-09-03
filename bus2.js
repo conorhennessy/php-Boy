@@ -7,19 +7,14 @@ function getbusdata(stopID,target,lines){
 			var BusDepartures = JSON.parse(this.responseText);
 			
 			
-    
-			
-			
 			var times =[];
 			
-			for(var i=0; i<=lines.length;i++){
-				
-				
+			for(var i=0; i<=lines.length;i++){	
 				line=lines[i]
 				console.log(line);
 				
 				try{
-					BusDepartures.departures[line].length;
+					BusDepartures.departures[line].length;		//if this errors that means there are no times for this line;
 				}
 				catch(err){
 					continue;
@@ -74,13 +69,21 @@ function PrintBusStop(minsUntil,times,target){
 	var NextTime = document.createElement("p");
 	NextTime.className="NextBusNum";
 	NextTime.style.display="inline";
+	if(minsUntil>0){
 	NextTime.appendChild(document.createTextNode(minsUntil));
+	}
+
 	next.appendChild(NextTime);
 	
 	var mins = document.createElement("p");
 	mins.className="NextbusMins";
 	mins.style.display="inline";
+	if(minsUntil>0){
 	mins.appendChild(document.createTextNode("mins"));
+	}
+	else{
+		mins.appendChild(document.createTextNode("Due"));
+	}
 	next.appendChild(mins);
 	
 	var otherTimes = document.createElement("div");
@@ -88,7 +91,9 @@ function PrintBusStop(minsUntil,times,target){
 		var timepara=document.createElement("p");
 		timepara.className="otherTimes";
 		timepara.style.display="inline";
+		if(times[i]!=null){
 		timepara.appendChild(document.createTextNode(times[i]));
+		}
 		otherTimes.appendChild(timepara);
 	}
 	
