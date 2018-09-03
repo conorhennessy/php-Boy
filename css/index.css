@@ -101,16 +101,19 @@ p.tittle {
 	font-style: italic;
 }
 
-div.businfo{
-	font-family: 'digital-7', sans-serif;
-	display:inline-block;
+p.otherTimes{
+	font-size:11px;
 	padding:5px;
-	vertical-align:top;
+	font-family: 'Cousine', monospace;
 }
 
-div.busname{
-	font-family: sans-serif;
+p.NextBusNum{
+	font-size:20px;
 	
+	
+}
+p.NextBusMins{
+	padding-left:3px;
 }
 
 
