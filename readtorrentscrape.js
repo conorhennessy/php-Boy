@@ -29,7 +29,7 @@ function PrintTorrent(line){
 	var vals = line.split(",");
 	
 	var type = document.createElement("p");								//terrible variable names
-	var typeval = document.createTextNode(vals[2].substr(0,50));
+	var typeval = document.createTextNode(vals[2].substr(0,46));
 	type.style.display="inline";
 	type.style.padding="5px";
 	type.appendChild(typeval);
