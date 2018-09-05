@@ -19,11 +19,11 @@ function PrintCollection(date, week) {
     weekStyle = document.getElementsByClassName("week")[0].classList;
     document.getElementsByClassName("week")[0].innerHTML = week + " week";
     if (week == "green") {
-        document.getElementsByClassName("items")[0].innerHTML = "rubbish, glass & metal";
+        document.getElementsByClassName("items")[0].innerHTML = "paper & plastics";
         weekStyle.add("green-week");  //make it green
     }
     else {
-        document.getElementsByClassName("items")[0].innerHTML = "paper & plastics";
+        document.getElementsByClassName("items")[0].innerHTML = "rubbish, glass & metal";
         weekStyle.add("blue-week");   //make it blue   ooooh
     }
 
