@@ -34,21 +34,9 @@ function getbusdata(stopID,target,lines){
 				return 0;
 			}
 			
-			var date = new Date();
-			var hours = date.getHours();
-			var minutes = date.getMinutes();
-			var now = 60*hours + minutes;
-			
-			var nextbusHoursMins = times[0].split(":");
-		
-			
-			var nextbus= nextbusHoursMins[0]*60 + parseInt(nextbusHoursMins[1],10);
 			
 			
-			
-			var minsUntil = nextbus-now;
-			
-			PrintBusStop(minsUntil,times,target);
+			PrintBusStop(times,target);
 			
 			
 			
@@ -62,9 +50,31 @@ function getbusdata(stopID,target,lines){
 	xmlhttp.send();
 }
 
+function MinsUntilTime(time){
+	var date = new Date();
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var now = 60*hours + minutes;
+	
+	var nextbusHoursMins = time.split(":");
+		
+			
+	var timeinMins = parseInt(nextbusHoursMins[0]*60) + parseInt(nextbusHoursMins[1],10);
+	
+	return timeinMins-now;
+	
+}
 
-
-function PrintBusStop(minsUntil,times,target){
+function PrintBusStop(times,target){
+	minsUntil=MinsUntilTime(times[0]);
+	if(target=="ToColchester"){
+		ColchesterMinsUntil=minsUntil;
+	}
+	if(target=="ToWivenhoe"){
+		WivenhoeMinsUntil=minsUntil;
+	}
+	console.log(minsUntil);	
+	
 	var next = document.createElement("div");
 	var NextTime = document.createElement("p");
 	NextTime.className="NextBusNum";
@@ -87,7 +97,7 @@ function PrintBusStop(minsUntil,times,target){
 	next.appendChild(mins);
 	
 	var otherTimes = document.createElement("div");
-	for(var i=1; i<times.length;i++){
+	for(var i=0; i<times.length;i++){
 		var timepara=document.createElement("p");
 		timepara.className="otherTimes";
 		timepara.style.display="inline";
@@ -124,7 +134,8 @@ function tConvert (time) {
 
 
 
-
+var ColchesterMinsUntil;
+var WivenhoeMinsUntil;
 
 getbusdata("1500IM2533", "ToColchester",["62","62B"]);
 getbusdata("150032002012","ToWivenhoe",["61"]);

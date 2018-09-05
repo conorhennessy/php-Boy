@@ -42,15 +42,16 @@ var date = new Date();
 var weeknum = getWeekNumber(date);
 var day = date.getDay();
 
-//odd is green, even is blue
+//odd is blue, even is green
 if (day == 2 || day == 3){
 	if(weeknum % 2 == 0){
-		//Blue = rubbish, glass, metal
-		PrintCollection(date, "blue");
-	}
-	else{
 		//Green = paper, plastics
 		PrintCollection(date, "green");
+	}
+	else{
+		//Blue = rubbish, glass, metal
+		PrintCollection(date, "blue");
+		
 	}
 }
 else {
