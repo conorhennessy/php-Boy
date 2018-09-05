@@ -1,6 +1,6 @@
 function getbusdata(stopID,target,lines){
 	var xmlhttp = new XMLHttpRequest();
-	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id=d1b99ec5&app_key=aa04717447ce3425a78c2d3874b92639";
+	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e";
 	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -11,7 +11,7 @@ function getbusdata(stopID,target,lines){
 			
 			for(var i=0; i<=lines.length;i++){	
 				line=lines[i]
-				console.log(line);
+				
 				
 				try{
 					BusDepartures.departures[line].length;		//if this errors that means there are no times for this line;
@@ -27,7 +27,7 @@ function getbusdata(stopID,target,lines){
 						
 					}
 			}
-			console.log(times);
+			
 			if(times.length==0){
 				var element=document.getElementById(target);
 				element.appendChild(document.createTextNode("no more buses"));
@@ -68,12 +68,12 @@ function MinsUntilTime(time){
 function PrintBusStop(times,target){
 	minsUntil=MinsUntilTime(times[0]);
 	if(target=="ToColchester"){
-		ColchesterMinsUntil=minsUntil;
+		ColchesterNextTime=times[0];
 	}
 	if(target=="ToWivenhoe"){
-		WivenhoeMinsUntil=minsUntil;
+		WivenhoeNextTime=times[0];
 	}
-	console.log(minsUntil);	
+	
 	
 	var next = document.createElement("div");
 	var NextTime = document.createElement("p");
@@ -134,8 +134,8 @@ function tConvert (time) {
 
 
 
-var ColchesterMinsUntil;
-var WivenhoeMinsUntil;
+var ColchesterNextTime;
+var WivenhoeNextTime;
 
 getbusdata("1500IM2533", "ToColchester",["62","62B"]);
 getbusdata("150032002012","ToWivenhoe",["61"]);
