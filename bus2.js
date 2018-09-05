@@ -1,6 +1,13 @@
 function getbusdata(stopID,target,lines){
+	GetCredentials(function(){
+		
+		console.log("got keys "+creds)
+		
+		
+	
+
 	var xmlhttp = new XMLHttpRequest();
-	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e";
+	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id="+creds[0]+"&app_key="+creds[1];
 	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -48,6 +55,10 @@ function getbusdata(stopID,target,lines){
 		
 	};
 	xmlhttp.send();
+	
+	
+	});
+	
 }
 
 function MinsUntilTime(time){
@@ -139,7 +150,6 @@ var WivenhoeNextTime;
 
 getbusdata("1500IM2533", "ToColchester",["62","62B"]);
 getbusdata("150032002012","ToWivenhoe",["61"]);
-
 
 
 
