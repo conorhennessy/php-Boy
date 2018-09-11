@@ -23,6 +23,9 @@ function getbusdata(stopID,target,lines){
 					for(var i=0; i<BusDepartures.departures[line].length; i++){
 						
 						var time = BusDepartures.departures[line][i].expected_departure_time;
+						if(time==null){
+							time = BusDepartures.departures[line][i].aimed_departure_time;
+						}
 						times.push(time);
 						
 					}
