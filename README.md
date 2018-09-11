@@ -25,7 +25,7 @@ and opens a java program to scrape/process data
 
 
 
-![alt text](https://raw.githubusercontent.com/conorhennessy/php-Boy/master/picture2.jpg)
-![alt text](https://raw.githubusercontent.com/conorhennessy/php-Boy/master/picture3.jpg)
+![alt text](https://raw.githubusercontent.com/conorhennessy/php-Boy/master/preview.jpg)
+
 keep the screen on:
 https://www.raspberrypi.org/forums/viewtopic.php?t=18200
