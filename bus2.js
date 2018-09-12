@@ -13,13 +13,11 @@ function getbusdata(stopID,target,lines){
 		if (this.readyState == 4 && this.status == 200) {
 			var BusDepartures = JSON.parse(this.responseText);
 			
-			
 			var times =[];
 			
 			for(var i=0; i<=lines.length;i++){	
 				line=lines[i]
-				
-				
+								
 				try{
 					BusDepartures.departures[line].length;		//if this errors that means there are no times for this line;
 				}

@@ -116,6 +116,48 @@ p.NextBusMins{
 	padding-left:3px;
 }
 
+/*	Live Music	*/
+
+#LiveMusic{
+	position:absolute;
+	top:140px;
+	left:600px;
+	font-size:12px;
+	
+}
+
+.musicContainer{
+/*
+    width: 18em;
+    height: 8em;
+    margin: 1em auto;
+    overflow: hidden;
+	position:absolute;
+*/
+	
+}
+
+.marquee {
+	top: 6em;
+	position: relative;
+	box-sizing: border-box;
+	animation: marquee 15s linear infinite;
+}
+
+.marquee:hover {
+	animation-play-state: paused;
+}
+
+/* Make it move! */
+@keyframes marquee {
+	0%   { top:   8em }
+	100% { top: -22em }
+}
+
+div.MusicDate{
+	font-size:15px;
+}
+
 
 /* /Dad Joke Piece/ */
 div.dadjoke {
@@ -126,6 +168,7 @@ div.dadjoke {
     transform: translate(-1%,-1%); 
     padding: 15px;
 	max-height:150px;
+	max-width:700px
 }
 
 div.dadjoke {
@@ -172,7 +215,7 @@ div.torrents {
     position: absolute;
     top: 140px;
     left: 20px;
-	max-width:600px;
+	max-width:560px;
 	max-height:420px;
     transform: translate(-1%,-1%); 
     padding: 5px;
