@@ -3,14 +3,13 @@ function GetNextMonth(){
 	GetAPIKey(function(){
 		
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", "https://api.songkick.com/api/3.0/metro_areas/24426-uk-london/calendar.json?apikey="+Key, true);
-		//https://www.songkick.com/developer/upcoming-events-for-metro-area   //needs min date and max date
+		xmlhttp.open("GET", "https://api.songkick.com/api/3.0/metro_areas/24426-uk-london/calendar.json?apikey="+Key+"&min_date="+StartOfNextMonth()+"&max_date="+EndOfNextMonth(), true);
+		//https://www.songkick.com/developer/upcoming-events-for-metro-area   
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				
 				var json = JSON.parse(this.responseText);
 				var events = json.resultsPage.results.event;
-				
 				var lastDate="";
 				for(event in events){
 					var eventobj = events[event];
@@ -64,6 +63,27 @@ function printDate(date){
 	targetDiv.appendChild(DateHeader);
 	
 }
+
+function StartOfNextMonth(){
+	var date = new Date();
+	var nextmonth=date.getMonth()+2;
+	nextmonth = ("0" + nextmonth).slice(-2);  //make sure month is two digits
+	var min_date = date.getFullYear()+"-"+nextmonth+"-"+"01";
+	return min_date;
+}
+
+function EndOfNextMonth(){
+  var date = new Date();
+  var nextmonth=date.getMonth()+2;
+  nextmonthpadded = ("0" + nextmonth).slice(-2);  //make sure month is two digits
+  var max_date = date.getFullYear()+"-"+nextmonthpadded+"-"+daysInMonth(nextmonth,date.getFullYear());
+  return max_date;
+}
+    
+function daysInMonth (month, year) {
+    return new Date(year, month, 0).getDate();
+}
+
 
 function GetAPIKey(_callback){
     var rawFile = new XMLHttpRequest();
