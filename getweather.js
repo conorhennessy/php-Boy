@@ -1,41 +1,44 @@
-///make request for the weather over the next 4.5 ish days in 3 hour intervals. 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?id=2652618&APPID=77d556c4a3afa89eb1b61a0a836a40c6", true);
-xmlhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		var Weatherobj = JSON.parse(this.responseText)				
-			
-			var days = Arrayday();
-		
-			var temp0 = Math.round(Weatherobj.list[days[0]].main.temp-273.15);
-			var temp1 = Math.round(Weatherobj.list[days[1]].main.temp-273.15);
-			var temp2 = Math.round(Weatherobj.list[days[2]].main.temp-273.15);
-			var temp3 = Math.round(Weatherobj.list[days[3]].main.temp-273.15);
-			var temp4 = Math.round(Weatherobj.list[days[4]].main.temp-273.15);
-			
-			var weather0=Weatherobj.list[0].weather[0].main;
-			var weather1=Weatherobj.list[1].weather[0].main;
-			var weather2=Weatherobj.list[2].weather[0].main;
-			var weather3=Weatherobj.list[3].weather[0].main;
-			var weather4=Weatherobj.list[4].weather[0].main;
-			
-			var humidity0=Weatherobj.list[0].main.humidity;
-			var humidity1=Weatherobj.list[1].main.humidity;
-			var humidity2=Weatherobj.list[2].main.humidity;
-			var humidity3=Weatherobj.list[3].main.humidity;
-			var humidity4=Weatherobj.list[4].main.humidity;
-			
-			makeday(0,temp0,weather0,humidity0);
-			makeday(1,temp1,weather1,humidity1);
-			makeday(2,temp2,weather2,humidity2);
-			makeday(3,temp3,weather3,humidity3);
-			makeday(4,temp4,weather4,humidity4);
-		
-	}
-};
+function Getweather() {
+    var element = document.getElementById("weather");
+    element.innerHTML = "";
+///make request for the weather over the next 4.5 ish days in 3 hour intervals.
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?id=2652618&APPID=77d556c4a3afa89eb1b61a0a836a40c6", true);
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var Weatherobj = JSON.parse(this.responseText)
 
-xmlhttp.send();
+            var days = Arrayday();
 
+            var temp0 = Math.round(Weatherobj.list[days[0]].main.temp - 273.15);
+            var temp1 = Math.round(Weatherobj.list[days[1]].main.temp - 273.15);
+            var temp2 = Math.round(Weatherobj.list[days[2]].main.temp - 273.15);
+            var temp3 = Math.round(Weatherobj.list[days[3]].main.temp - 273.15);
+            var temp4 = Math.round(Weatherobj.list[days[4]].main.temp - 273.15);
+
+            var weather0 = Weatherobj.list[0].weather[0].main;
+            var weather1 = Weatherobj.list[1].weather[0].main;
+            var weather2 = Weatherobj.list[2].weather[0].main;
+            var weather3 = Weatherobj.list[3].weather[0].main;
+            var weather4 = Weatherobj.list[4].weather[0].main;
+
+            var humidity0 = Weatherobj.list[0].main.humidity;
+            var humidity1 = Weatherobj.list[1].main.humidity;
+            var humidity2 = Weatherobj.list[2].main.humidity;
+            var humidity3 = Weatherobj.list[3].main.humidity;
+            var humidity4 = Weatherobj.list[4].main.humidity;
+
+            makeday(0, temp0, weather0, humidity0);
+            makeday(1, temp1, weather1, humidity1);
+            makeday(2, temp2, weather2, humidity2);
+            makeday(3, temp3, weather3, humidity3);
+            makeday(4, temp4, weather4, humidity4);
+
+        }
+    };
+
+    xmlhttp.send();
+}
 
 function Arrayday(){
 	
@@ -141,3 +144,6 @@ function ShortDayPlusn(n){
 	return day;
 }
 	
+Getweather();
+
+var getweatherinterval= setInterval(Getweather,86400000)	//24 hours

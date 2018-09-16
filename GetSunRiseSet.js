@@ -1,17 +1,21 @@
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "https://api.sunrise-sunset.org/json?lat=51.867654&lng=-0.955715&date=today", true);
-xmlhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		var page = JSON.parse(this.responseText)			
-		
-		var sunrise = page.results.sunrise;
-		var sunset = page.results.sunset;
-		
-		printTime(sunrise,sunset);
-	}
-};
+function getsunriseinfo(){
+    var element = document.getElementById("sunriseTime");
+    element.innerHTML="";
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", "https://api.sunrise-sunset.org/json?lat=51.867654&lng=-0.955715&date=today", true);
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var page = JSON.parse(this.responseText)
 
-xmlhttp.send();
+			var sunrise = page.results.sunrise;
+			var sunset = page.results.sunset;
+
+			printTime(sunrise,sunset);
+		}
+	};
+
+	xmlhttp.send();
+}
 
 function printTime(sunrise,sunset){
 	
@@ -26,6 +30,9 @@ function printTime(sunrise,sunset){
 	sundown.appendChild(uptext);
 	
 	element.appendChild(sundown);
-	
-	
+
 }
+
+getsunriseinfo()
+
+var sunriseinterval=setInterval(getsunriseinfo,43200000)	//12 hours

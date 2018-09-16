@@ -1,7 +1,9 @@
-function readTextFile(file)
+function readTextFile()
 {
+    var element = document.getElementById("torrentspane");
+    element.innerHTML="";
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, true);
+    rawFile.open("GET", "zooqletopseeds.txt", true);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
@@ -25,7 +27,7 @@ function readTextFile(file)
 function PrintTorrent(line){
 	if(line==""){return 0;}
 	var element = document.getElementById("torrentspane");
-	
+
 	var vals = line.split(",");
 	
 	var type = document.createElement("p");								//terrible variable names
@@ -70,4 +72,6 @@ function PadEnd(string,targetlen){
 	return string;
 }
 
-readTextFile("zooqletopseeds.txt");	
+readTextFile();
+
+var torrentRefresh= setInterval(readTextFile,7200000)		//2 hours

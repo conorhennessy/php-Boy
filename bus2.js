@@ -2,9 +2,6 @@ function getbusdata(stopID,target,lines){
 	GetCredentials(function(){
 		
 		console.log("got keys "+creds)
-		
-		
-	
 
 	var xmlhttp = new XMLHttpRequest();
 	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id="+creds[0]+"&app_key="+creds[1];
@@ -85,8 +82,10 @@ function PrintBusStop(times,target){
 	if(target=="ToWivenhoe"){
 		WivenhoeNextTime=times[0];
 	}
-	
-	
+
+    var element = document.getElementById(target);
+	element.innerHTML="";
+
 	var next = document.createElement("div");
 	var NextTime = document.createElement("p");
 	NextTime.className="NextBusNum";
@@ -120,7 +119,7 @@ function PrintBusStop(times,target){
 	}
 	
 	
-	var element = document.getElementById(target);
+
 	element.appendChild(next);
 	element.appendChild(otherTimes);
 	
@@ -143,8 +142,12 @@ function tConvert (time) {
 }
 
 
-
-
+function GetStop1(){
+    getbusdata("1500IM2533", "ToColchester",["62","62B"]);
+}
+function GetStop2(){
+    getbusdata("150032002012","ToWivenhoe",["61"]);
+}
 
 var ColchesterNextTime;
 var WivenhoeNextTime;
@@ -152,5 +155,10 @@ var WivenhoeNextTime;
 getbusdata("1500IM2533", "ToColchester",["62","62B"]);
 getbusdata("150032002012","ToWivenhoe",["61"]);
 
+var stop1=setInterval(GetStop1,600000)
+
+var stop2=setInterval(GetStop2,600000)
 
 
+
+///600000

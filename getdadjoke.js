@@ -1,3 +1,4 @@
+function GetJoke(){
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.open("GET", "https://www.reddit.com/r/dadjokes/rising.json", true);
 xmlhttp.onreadystatechange = function() {
@@ -33,8 +34,11 @@ xmlhttp.onreadystatechange = function() {
 };
 
 xmlhttp.send();
+}
 
 function printjoke(title,selftext,author){
+    var element = document.getElementById("joke");
+    element.innerHTML="";
 	var jokebox = document.createElement("div");
 	jokebox.className="joke";
 	
@@ -57,6 +61,10 @@ function printjoke(title,selftext,author){
 	authorelem.appendChild(authortext);
 	jokebox.appendChild(authorelem);
 	
-	var element = document.getElementById("joke");
+
 	element.appendChild(jokebox);
 }
+
+GetJoke();
+
+var getjokeinterval=setInterval(GetJoke,300000)
