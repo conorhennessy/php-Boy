@@ -35,6 +35,7 @@ function getbusdata(stopID,target,lines){
 			
 			if(times.length==0){
 				var element=document.getElementById(target);
+				element.innerHTML=""
 				element.appendChild(document.createTextNode("no more buses"));
 				return 0;
 			}
@@ -48,6 +49,7 @@ function getbusdata(stopID,target,lines){
 		}
 		if(this.readyState==4 && this.status==403){
 			var element=document.getElementById(target);
+			element.innerHTML=""
 			element.appendChild(document.createTextNode("out of requests"));
 		}
 		
