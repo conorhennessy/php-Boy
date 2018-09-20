@@ -11,7 +11,9 @@ function GetNextMonth(){
 				var json = JSON.parse(this.responseText);
 				var events = json.resultsPage.results.event;
 				var lastDate="";
+				var count=0
 				for(event in events){
+					if(count>38){break}
 					var eventobj = events[event];
 					if(eventobj.type=="festival"){
 						continue;
@@ -28,8 +30,9 @@ function GetNextMonth(){
 					printEvent(artist,venue,date);
 					//console.log(artist,"@",venue,"on",date);
 					lastDate=date;
+					count++
 				}
-				
+
 
 			}
 		};
@@ -130,7 +133,24 @@ function GetAPIKey(_callback){
     rawFile.send(null);
 }
 
+async function waitforkey(){
+
+    GetAPIKey(function(){
+
+
+	})
+    await sleep(2000)
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 var Key=""
+
+
+//waitforkey()
+console.log(Key);
+
 
 GetNextMonth();

@@ -39,26 +39,27 @@ xmlhttp.send();
 function printjoke(title,selftext,author){
     var element = document.getElementById("joke");
     element.innerHTML="";
+
 	var jokebox = document.createElement("div");
 	jokebox.className="joke";
-	
+
+	var subname = document.createElement("p")
+	subname.className="subreddit"
+	subname.innerText="r/dadjokes"
+	jokebox.appendChild(subname)
+
 	var titleelm = document.createElement("p");
-	var titletext = document.createTextNode(title);
-	titletext.className="joketitle";
-	titleelm.appendChild(titletext);
+	titleelm.innerText=title
 	jokebox.appendChild(titleelm);
-	
+
 	var selftextelm = document.createElement("p");
-	var selftexttext = document.createTextNode(selftext);
 	selftextelm.className="jokeselftext";
-	selftextelm.appendChild(selftexttext);
+	selftextelm.innerText=selftext
 	jokebox.appendChild(selftextelm);
 	
 	var authorelem = document.createElement("p");
-	var authortext = document.createTextNode(author);
 	authorelem.className="jokeauthor";
-	authorelem.appendChild(document.createTextNode("u/"));
-	authorelem.appendChild(authortext);
+	authorelem.innerText="u/"+author
 	jokebox.appendChild(authorelem);
 	
 
