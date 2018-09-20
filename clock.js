@@ -1,22 +1,25 @@
+
+var dateobj = new Date()
 //invokes functions as soon as window loads
 window.onload = function(){
 	time();
 	meridian();
 	whatDay();
+	getdate()
 	setInterval(function(){
 		time();
 		meridian();
 		whatDay();
+		getdate()
 	}, 1000);
 };
 
 
 //gets current time and changes html to reflect it
 function time(){
-	var date = new Date(),
-		hours = date.getHours(),
-		minutes = date.getMinutes(),
-		seconds = date.getSeconds();
+	var	hours = dateobj.getHours(),
+		minutes = dateobj.getMinutes(),
+		seconds = dateobj.getSeconds();
 
 	//make clock a 12 hour clock instead of 24 hour clock
 	hours = (hours > 12) ? (hours - 12) : hours;
@@ -40,8 +43,7 @@ function addZero (val){
 
 //lights up either am or pm on clock
 function meridian(){
-	var date = new Date(),
-		hours = date.getHours();
+	var hours = dateobj.getHours();
 	am = document.getElementsByClassName("am")[0].classList;
 	pm = document.getElementsByClassName("pm")[0].classList;
 	
@@ -49,10 +51,17 @@ function meridian(){
 	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");           ///pm
 }
 
+function getdate(){
+
+	element = document.getElementById("date")
+
+	element.innerText=dateobj.getDate()
+}
+
+
 //lights up what day of the week it is
 function whatDay(){
-	var date = new Date(),
-	currentDay = date.getDay();
+	var currentDay = dateobj.getDay();
 	
 	if(currentDay==-1){currentDay=6;}
 	if(currentDay==0){currentDay=6}

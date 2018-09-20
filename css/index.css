@@ -321,6 +321,13 @@ div.days {
 div.days .day {
 	display: inline-block;
 }
+#date{
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-transform: uppercase;
+}
 
 div.days .day p {
 	font-size: 12px;
