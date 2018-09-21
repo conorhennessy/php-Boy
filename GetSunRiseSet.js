@@ -2,7 +2,7 @@ function getsunriseinfo(){
     var element = document.getElementById("sunriseTime");
     element.innerHTML="";
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", "https://api.sunrise-sunset.org/json?lat=51.867654&lng=-0.955715&date=today", true);
+	xmlhttp.open("GET", "http://api.sunrise-sunset.org/json?lat=51.867654&lng=-0.955715&date=today", true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			var page = JSON.parse(this.responseText)
