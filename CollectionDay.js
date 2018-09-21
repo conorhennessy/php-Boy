@@ -36,25 +36,53 @@ function PrintCollection(date, week) {
     if (day == 3) {
         document.getElementsByClassName("prompt")[0].innerHTML = "It's collection day today!";
     }
+
+    document.getElementById("collection").className="bordered"
 }
 
-var date = new Date();
-var weeknum = getWeekNumber(date);
-var day = date.getDay();
+function getweekfromfile(_callback){
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", "collectionweek.json", true);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
 
-//odd is blue, even is green
-if (day == 2 || day == 3){
-	if(weeknum % 2 == 0){
-		//Green = paper, plastics
-		PrintCollection(date, "green");
-	}
-	else{
-		//Blue = rubbish, glass, metal
-		PrintCollection(date, "blue");
-		
-	}
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+
+                Week= this.responseText;
+                console.log(Week)
+                return _callback
+                return Week
+            }
+        }
+    }
+    rawFile.send(null);
+
 }
-else {
-	collectionBox = document.getElementsByClassName("collection")[0].classList;
-	collectionBox.remove("bordered");
+
+function displayCollection(){
+    var date = new Date();
+    var day = date.getDay();
+
+    PrintCollection(date,Week);
+    //odd is blue, even is green
+    if (day == 2 || day == 3){
+        PrintCollection(date,Week)
+    }
+
+    else {
+        collectionBox = document.getElementsByClassName("collection")[0].classList;
+        collectionBox.remove("bordered");
+    }
 }
+
+Week=""
+getweekfromfile()
+collectionBox = document.getElementsByClassName("collection")[0].classList;
+collectionBox.remove("bordered");
+
+var checkweek=setInterval(getweekfromfile,43200000)             //12 hours
+var runcollections=setInterval(displayCollection,43200000)   //       43200000
+
