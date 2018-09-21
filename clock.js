@@ -5,12 +5,13 @@ window.onload = function(){
 	time();
 	meridian();
 	whatDay();
-	getdate()
+	getdate();
 	setInterval(function(){
+		dateobj = new Date()
 		time();
 		meridian();
 		whatDay();
-		getdate()
+		getdate();
 	}, 1000);
 };
 

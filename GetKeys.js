@@ -1,11 +1,8 @@
 function GetCredentials(_callback)
 {
-	
     var rawFile = new XMLHttpRequest();
-	
     rawFile.open("GET", "transportKeys.json", true);
-	
-	
+
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
@@ -20,10 +17,10 @@ function GetCredentials(_callback)
 				
 				var arraynum=Math.floor(Math.random()*file.keys.length)
 				
-				console.log(arraynum)
+				//console.log(arraynum)
 				creds.push(file.keys[arraynum].app);
 				creds.push(file.keys[arraynum].key);
-				console.log(creds);
+				//console.log(creds);
 				
 				
 				_callback();
