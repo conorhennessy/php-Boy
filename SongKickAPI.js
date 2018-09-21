@@ -13,7 +13,7 @@ function GetNextMonth(){
 				var lastDate="";
 				var count=0
 				for(event in events){
-					if(count>38){break}
+					if(count>26){break}
 					var eventobj = events[event];
 					if(eventobj.type=="festival"){
 						continue;
