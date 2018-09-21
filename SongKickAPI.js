@@ -39,7 +39,7 @@ function GetNextMonth(){
 
 	xmlhttp.send();
 	
-	});
+	})
 }
 
 function printEvent(artist,venue,date){
@@ -133,14 +133,7 @@ function GetAPIKey(_callback){
     rawFile.send(null);
 }
 
-async function waitforkey(){
 
-    GetAPIKey(function(){
-
-
-	})
-    await sleep(2000)
-}
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -149,8 +142,6 @@ function sleep(ms) {
 var Key=""
 
 
-//waitforkey()
-console.log(Key);
 
 
 GetNextMonth();
