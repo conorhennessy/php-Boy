@@ -7,10 +7,13 @@ with open('collectionpage.html', 'r') as myfile:
     pagetext=myfile.read()
     pagetext.replace("\n","")
     startint = pagetext.find("This Weeks Collection is")
+    f = open("collectionweek.json","w+")
     if(pagetext[startint:startint+110].replace(" ","").find("cardblueweek")!=-1):
         print("its blue week")
-    else:
+        f.write("blue")
+    if(pagetext[startint:startint+110].replace(" ","").find("cardgreenweek")!=-1):
         print("its green week")
+        f.write("green")
 
 
 
