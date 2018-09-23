@@ -267,12 +267,13 @@ div.weatherpane {
     left: 20px;
     transform: translate(-1%,-1%); 
     padding: 8px;
-	width:480px;
+	/* width:480px; */
 }
 
 div.weather {
 	width:100%;
 	padding-left:5px;
+	padding-right:5px;
 	display:inline-block;
 	margin: 0 auto;
 	font-size: 12px;
