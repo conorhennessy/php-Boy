@@ -79,10 +79,20 @@ function MinsUntilTime(time){
 function PrintBusStop(times,target){
 	minsUntil=MinsUntilTime(times[0]);
 	if(target=="ToColchester"){
-		ColchesterNextTime=times[0];
+		if(minsUntil<0){
+            ColchesterNextTime=times[1];
+		}
+		else {
+            ColchesterNextTime = times[0];
+        }
 	}
 	if(target=="ToWivenhoe"){
+		if(minsUntil<0){
+            WivenhoeNextTime=times[1];
+		}
+		else{
 		WivenhoeNextTime=times[0];
+		}
 	}
 
     var element = document.getElementById(target);
