@@ -79,7 +79,7 @@ function MinsUntilTime(time){
 function PrintBusStop(times,target){
 	minsUntil=MinsUntilTime(times[0]);
 	if(target=="ToColchester"){
-		if(minsUntil<0){
+		if(minsUntil<1){
             ColchesterNextTime=times[1];
 		}
 		else {
@@ -87,7 +87,7 @@ function PrintBusStop(times,target){
         }
 	}
 	if(target=="ToWivenhoe"){
-		if(minsUntil<0){
+		if(minsUntil<1){
             WivenhoeNextTime=times[1];
 		}
 		else{
