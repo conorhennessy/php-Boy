@@ -36,7 +36,6 @@
 
 /*
 body {
-
 	background:#ff7b7b;
 	//old color
 }
@@ -66,7 +65,6 @@ body{
 }
 
 #grad{
-	
 	background: linear-gradient(270deg, #5a168e, #ef6bdc);
 	z-index:-1;
 }
@@ -125,7 +123,6 @@ p.NextBusMins{
 	top:140px;
 	left:600px;
 	font-size:12px;
-	
 }
 
 .musicContainer{
@@ -136,7 +133,6 @@ p.NextBusMins{
     overflow: hidden;
 	position:absolute;
 */
-	
 }
 
 .marquee {
@@ -169,11 +165,8 @@ div.dadjoke {
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 15px;
-	max-height:150px;
-	max-width:700px
-}
-
-div.dadjoke {
+	max-height: 150px;
+	max-width: 700px;
 	font-size: 12px;
 	font-weight: bold;
 	font-family: sans-serif;
@@ -195,7 +188,7 @@ p.jokeauthor{
 div.torrents {
 	text-align: right;
     position: absolute;
-    top: 140px;
+    top: 170px;
     right: 20px;
 	max-width:30%;
 	max-height:420px;
@@ -231,10 +224,11 @@ div.torrents {
 #collection{
 	position:absolute;
 	bottom:20px;
-	left: 550px;
+	left: 490px;
 	text-align: center;
 	padding: 8px;
 	line-height: 2.5;
+	height: 150px;
 }
 
 .green-week{
@@ -268,6 +262,7 @@ div.weatherpane {
     transform: translate(-1%,-1%); 
     padding: 8px;
 	/* width:480px; */
+	height: 150px;
 }
 
 div.weather {
@@ -307,6 +302,7 @@ div.dateAndClock {
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 8px;
+	height: 150px;
 }
 
 .light-on {  /*Changes color of text to appear like its "on"*/
