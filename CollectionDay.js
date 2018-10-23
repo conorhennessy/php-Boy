@@ -80,6 +80,7 @@ function displayCollection(){
 
 Week=""
 getweekfromfile()
+displayCollection()
 collectionBox = document.getElementsByClassName("collection")[0].classList;
 collectionBox.remove("bordered");
 
