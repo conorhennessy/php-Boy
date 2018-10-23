@@ -59,10 +59,10 @@ body{
 	background: linear-gradient(270deg, #5a168e, #ef6bdc);
 	background-size: 400% 400%;
 	font-family: 'Cousine', monospace;
-	-webkit-animation: BackgroundColour 30s ease infinite;
+	/*-webkit-animation: BackgroundColour 30s ease infinite;
 	-moz-animation: BackgroundColour 30s ease infinite;
-	animation: BackgroundColour 30s ease infinite; 
-	
+	animation: BackgroundColour 30s ease infinite;
+	*/
 }
 
 #grad{
