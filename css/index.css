@@ -128,6 +128,10 @@ p.NextBusMins{
 	
 }
 
+div.MusicDate{
+	font-size:15px;
+}
+
 .musicContainer{
 /*
     width: 18em;
@@ -136,7 +140,7 @@ p.NextBusMins{
     overflow: hidden;
 	position:absolute;
 */
-	
+
 }
 
 .marquee {
@@ -156,9 +160,6 @@ p.NextBusMins{
 	100% { top: -22em }
 }
 
-div.MusicDate{
-	font-size:15px;
-}
 
 
 /* /Dad Joke Piece/ */
@@ -170,10 +171,8 @@ div.dadjoke {
     transform: translate(-1%,-1%); 
     padding: 15px;
 	max-height:150px;
-	max-width:700px
-}
+	max-width:700px;
 
-div.dadjoke {
 	font-size: 12px;
 	font-weight: bold;
 	font-family: sans-serif;
@@ -191,14 +190,14 @@ p.jokeauthor{
 }
 
 
-/* Torrents Piece/ */
+/* /Torrents Piece/ */
 div.torrents {
 	text-align: right;
     position: absolute;
-    top: 140px;
+    top: 190px;
     right: 20px;
 	max-width:30%;
-	max-height:420px;
+	max-height:560px;
     transform: translate(-1%,-1%); 
     padding: 3px;
 }
