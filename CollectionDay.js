@@ -84,5 +84,5 @@ collectionBox = document.getElementsByClassName("collection")[0].classList;
 collectionBox.remove("bordered");
 
 var checkweek=setInterval(getweekfromfile,43200000)             //12 hours
-var runcollections=setInterval(displayCollection,43200000)   //       43200000
+var runcollections=setInterval(displayCollection,3600000)   //       43200000
 
