@@ -121,7 +121,7 @@ p.NextBusMins{
 #LiveMusic{
 	position:absolute;
 	top:140px;
-	left:600px;
+	left:610px;
 	font-size:12px;
 }
 
@@ -224,7 +224,7 @@ div.torrents {
 #collection{
 	position:absolute;
 	bottom:20px;
-	left: 490px;
+	left: 510px;
 	text-align: center;
 	padding: 8px;
 	line-height: 2.5;
