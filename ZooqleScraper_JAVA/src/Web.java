@@ -15,7 +15,7 @@ public class Web {
     }
 
     public int popularToFile(String url, WebDriver driver, String savepath) {
-        System.out.println("donwloading from zooqle...");
+        System.out.println("downloading from zooqle...");
         driver.get(url);
         WebElement table = driver.findElement(By.xpath("//ul[@class='nav nav-pills nav-stacked rm-wrap text-trunc sidebar-list']"));
         List<WebElement> items = table.findElements(By.tagName("li"));

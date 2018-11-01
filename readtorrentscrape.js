@@ -57,6 +57,12 @@ function PrintTorrent(line){
 	if(vals[0]==="tv"){
 		name.style.color="#6ec2b1";
 	}
+    if(vals[0]==="app"){
+        name.style.color="#7BBDFF";
+    }
+    if(vals[0]==="music"){
+        name.style.color="#FF7B7B";
+    }
 	
 	
 	element.appendChild(type);
