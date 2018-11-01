@@ -16,6 +16,10 @@ function getWeekNumber(d) {
 function PrintCollection(date, week) {
 	//document.getElementsByClassName("title")[0].innerHTML = "RUBBISH COLLECTION";
     // Show what this weeks collection is...
+    element =document.getElementById("collection");
+
+    element.innerHTML="<p class=\"title\"></p><p class=\"week\"></p><p class=\"items\"></p><p class=\"prompt\"></p>";
+
     weekStyle = document.getElementsByClassName("week")[0].classList;
     document.getElementsByClassName("week")[0].innerHTML = week + " week";
     if (week == "green") {
@@ -37,7 +41,7 @@ function PrintCollection(date, week) {
         document.getElementsByClassName("prompt")[0].innerHTML = "It's collection day today!";
     }
 
-    document.getElementById("collection").className="bordered"
+
 }
 
 function getweekfromfile(_callback){
@@ -50,7 +54,6 @@ function getweekfromfile(_callback){
 
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-
                 Week= this.responseText;
                 console.log(Week)
                 return _callback
@@ -70,19 +73,22 @@ function displayCollection(){
     //odd is blue, even is green
     if (day == 2 || day == 3){
         PrintCollection(date,Week)
+        console.log("print")
     }
 
     else {
-        collectionBox = document.getElementsByClassName("collection")[0].classList;
-        collectionBox.remove("bordered");
+        collectionBox = document.getElementById("collection")
+        collectionBox.innerHTML="";
+        collectionBox.classList.remove("bordered");
     }
 }
+
 
 Week=""
 getweekfromfile()
 displayCollection()
-collectionBox = document.getElementsByClassName("collection")[0].classList;
-collectionBox.remove("bordered");
+
+
 
 var checkweek=setInterval(getweekfromfile,43200000)             //12 hours
 var runcollections=setInterval(displayCollection,3600000)   //       43200000
