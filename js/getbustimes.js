@@ -1,10 +1,10 @@
 function getbusdata(stopID,target,lines){
 	GetTransportCredentials(function(){
 		
-		console.log("got keys "+creds)
+		console.log("got keys "+Transportcreds)
 
 	var xmlhttp = new XMLHttpRequest();
-	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id="+creds[0]+"&app_key="+creds[1];
+	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id="+Transportcreds[0]+"&app_key="+Transportcreds[1];
 	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -61,8 +61,6 @@ function MinsUntilTime(time){
 	var now = 60*hours + minutes;
 	
 	var nextbusHoursMins = time.split(":");
-		
-			
 	var timeinMins = parseInt(nextbusHoursMins[0]*60) + parseInt(nextbusHoursMins[1],10);
 	
 	return timeinMins-now;
@@ -91,18 +89,12 @@ function PrintBusStop(times,target){
 	if(minsUntil>0){
 	NextTime.appendChild(document.createTextNode(minsUntil));
 	}
-
 	next.appendChild(NextTime);
 	
 	var mins = document.createElement("p");
 	mins.className="NextbusMins";
 	mins.style.display="inline";
-	if(minsUntil>0){
-	mins.appendChild(document.createTextNode("mins"));
-	}
-	else{
-		mins.appendChild(document.createTextNode("Due"));
-	}
+	mins.innerHTML+="mins"
 	next.appendChild(mins);
 	
 	var otherTimes = document.createElement("div");
@@ -129,11 +121,13 @@ function refreshTimes(){
     try{
         var colchesterBox = document.getElementById("ToColchester");
         var timeLeftElem= colchesterBox.getElementsByClassName("NextBusNum");
-        var nexttimecol=ColchesterNextTimes[0];
-        if(ColchesterNextTimes[0]<0){
-        	nexttimecol=ColchesterNextTimes[1];
+        var nexttimecol=MinsUntilTime(ColchesterNextTimes[0])
+        if(nexttimecol<=0){
+        	nexttimecol=MinsUntilTime(ColchesterNextTimes[1])
+
 		}
-        timeLeftElem[0].innerHTML=MinsUntilTime(nexttimecol);
+
+        timeLeftElem[0].innerHTML=nexttimecol
 
     }catch(err){
         console.log("colchester time recal failed")
@@ -143,11 +137,11 @@ function refreshTimes(){
     try{
         var WivenhoeBox = document.getElementById("ToWivenhoe");
         var timeLeftElem= WivenhoeBox.getElementsByClassName("NextBusNum");
-        var nexttimewiv=WivenhoeNextTimes[0]
-        if(WivenhoeNextTimes[0]<0){
-            nexttimewiv=WivenhoeNextTimes[1]
+        var nexttimewiv=MinsUntilTime(WivenhoeNextTimes[0])
+        if(nexttimewiv<=0){
+            nexttimewiv=MinsUntilTime(WivenhoeNextTimes[1])
         }
-        timeLeftElem[0].innerHTML=MinsUntilTime(nexttimewiv);
+        timeLeftElem[0].innerHTML=nexttimewiv
 
     }catch(err){
         console.log("wivenhoe time recal failed")

@@ -13,14 +13,14 @@ function GetTransportCredentials(_callback)
 				
                 var file= JSON.parse(this.responseText)	
 				
-				creds =[]
+				Transportcreds =[]
 				
 				var arraynum=Math.floor(Math.random()*file.keys.length)
 				
 				//console.log(arraynum)
-				creds.push(file.keys[arraynum].app);
-				creds.push(file.keys[arraynum].key);
-				//console.log(creds);
+				Transportcreds.push(file.keys[arraynum].app);
+				Transportcreds.push(file.keys[arraynum].key);
+				//console.log(Transportcreds);
 				
 				
 				_callback();
@@ -54,5 +54,5 @@ function secondFunction(){
 */
 
 
-var creds=[]
+var Transportcreds=[]
 
