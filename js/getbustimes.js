@@ -1,5 +1,5 @@
 function getbusdata(stopID,target,lines){
-	GetCredentials(function(){
+	GetTransportCredentials(function(){
 		
 		console.log("got keys "+creds)
 
@@ -71,21 +71,14 @@ function MinsUntilTime(time){
 
 function PrintBusStop(times,target){
 	minsUntil=MinsUntilTime(times[0]);
+	if(minsUntil<0){
+		minsUntil=MinsUntilTime(time[1])
+	}
 	if(target=="ToColchester"){
-		if(minsUntil<1){
-            ColchesterNextTime=times[1];
-		}
-		else {
-            ColchesterNextTime = times[0];
-        }
+            ColchesterNextTimes=times
 	}
 	if(target=="ToWivenhoe"){
-		if(minsUntil<1){
-            WivenhoeNextTime=times[1];
-		}
-		else{
-		WivenhoeNextTime=times[0];
-		}
+            WivenhoeNextTimes=times;
 	}
 
     var element = document.getElementById(target);
@@ -136,7 +129,11 @@ function refreshTimes(){
     try{
         var colchesterBox = document.getElementById("ToColchester");
         var timeLeftElem= colchesterBox.getElementsByClassName("NextBusNum");
-        timeLeftElem[0].innerHTML=MinsUntilTime(ColchesterNextTime);
+        var nexttimecol=ColchesterNextTimes[0];
+        if(ColchesterNextTimes[0]<0){
+        	nexttimecol=ColchesterNextTimes[1];
+		}
+        timeLeftElem[0].innerHTML=MinsUntilTime(nexttimecol);
 
     }catch(err){
         console.log("colchester time recal failed")
@@ -146,7 +143,11 @@ function refreshTimes(){
     try{
         var WivenhoeBox = document.getElementById("ToWivenhoe");
         var timeLeftElem= WivenhoeBox.getElementsByClassName("NextBusNum");
-        timeLeftElem[0].innerHTML=MinsUntilTime(WivenhoeNextTime);
+        var nexttimewiv=WivenhoeNextTimes[0]
+        if(WivenhoeNextTimes[0]<0){
+            nexttimewiv=WivenhoeNextTimes[1]
+        }
+        timeLeftElem[0].innerHTML=MinsUntilTime(nexttimewiv);
 
     }catch(err){
         console.log("wivenhoe time recal failed")
@@ -165,8 +166,8 @@ function GetStop2(){
     getbusdata("150032002012","ToWivenhoe",["61"]);
 }
 
-var ColchesterNextTime;
-var WivenhoeNextTime;
+var ColchesterNextTimes;
+var WivenhoeNextTimes;
 
 getbusdata("1500IM2533", "ToColchester",["62","62B"]);
 getbusdata("150032002012","ToWivenhoe",["61"]);

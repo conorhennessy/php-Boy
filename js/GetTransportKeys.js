@@ -1,4 +1,4 @@
-function GetCredentials(_callback)
+function GetTransportCredentials(_callback)
 {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", "transportKeys.json", true);
