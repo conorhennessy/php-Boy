@@ -228,7 +228,7 @@ div.torrents {
 	text-align: center;
 	padding: 8px;
 	line-height: 2.5;
-	height: 150px;
+	height: 130px;
 }
 
 .green-week{
@@ -262,7 +262,7 @@ div.weatherpane {
     transform: translate(-1%,-1%); 
     padding: 8px;
 	/* width:480px; */
-	height: 150px;
+	height: 130px;
 }
 
 div.weather {
@@ -302,7 +302,7 @@ div.dateAndClock {
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 8px;
-	height: 150px;
+	height: 130px;
 }
 
 .light-on {  /*Changes color of text to appear like its "on"*/
