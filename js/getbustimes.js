@@ -1,71 +1,196 @@
-function getbusdata(stopid, direction){
+function getbusdata(stopID,target,lines){
+	GetCredentials(function(){
+		
+		console.log("got keys "+creds)
+
 	var xmlhttp = new XMLHttpRequest();
-	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopid+"/live.json?app_id=58108540&app_key=6129f04b28d157f30089c4ac0339fd8e";
+	var url = "https://transportapi.com/v3/uk/bus/stop/"+stopID+"/live.json?app_id="+creds[0]+"&app_key="+creds[1];
 	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			var BusDepartures = JSON.parse(this.responseText);
 			
-			for(var bus in BusDepartures.departures){			//each bus line
+			var times =[];
 			
-				var line=BusDepartures.departures[bus][0].line;
-				var timearr =[];
-				for(time in BusDepartures.departures[bus]){		//each coming time
-					var time=BusDepartures.departures[bus][time];
-					timearr.push(tConvert(time.aimed_departure_time));
-					
+			for(var i=0; i<=lines.length;i++){	
+				line=lines[i]
+								
+				try{
+					BusDepartures.departures[line].length;		//if this errors that means there are no times for this line;
+				}
+				catch(err){
+					continue;
 				}
 				
-				makebusline(line,timearr,direction);
-				
+					for(var i=0; i<BusDepartures.departures[line].length; i++){
+						
+						var time = BusDepartures.departures[line][i].expected_departure_time;
+						if(time==null){
+							time = BusDepartures.departures[line][i].aimed_departure_time;
+						}
+						times.push(time);
+						
+					}
 			}
+			
+			if(times.length==0){
+				var element=document.getElementById(target);
+				element.innerHTML=""
+				element.appendChild(document.createTextNode("no more buses"));
+				return 0;
+			}
+
+			PrintBusStop(times,target);
+
 		}
-		else{
-			var errorpara = document.createElement("p");
-			errorpara.appendChild(document.createTextNode("Error getting bus info!"));
+		if(this.readyState==4 && this.status==403){
+			var element=document.getElementById(target);
+			element.innerHTML=""
+			element.appendChild(document.createTextNode("out of requests"));
 		}
+		
 	};
 	xmlhttp.send();
+	});
 }
 
-getbusdata("1500IM2533", "busnorth");
-
-getbusdata("150032002012", "bussouth");
-
-function makebusline(line,timearr,direction){
-		var businfo = document.createElement("div");
-		businfo.className="businfo";
-		var busname = document.createElement("div");
-		busname.className="busname";
-		businfo.appendChild(busname);
-		var busnametext = document.createTextNode(line);
-		busname.appendChild(busnametext);
+function MinsUntilTime(time){
+	var date = new Date();
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var now = 60*hours + minutes;
+	
+	var nextbusHoursMins = time.split(":");
 		
-		
-		for(var i=0; i <timearr.length;i++){
 			
-			var time = document.createElement("div");
-			time.className="time";
-			var timetext=document.createTextNode(timearr[i]);
-			time.appendChild(timetext);
-			businfo.appendChild(time);
-			
-		}
-		
-		
-		var element = document.getElementById(direction);
-		element.appendChild(businfo);
+	var timeinMins = parseInt(nextbusHoursMins[0]*60) + parseInt(nextbusHoursMins[1],10);
+	
+	return timeinMins-now;
 	
 }
 
-function tConvert (time) {
-  // Check correct time format and split into components
-  time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+function PrintBusStop(times,target){
+	minsUntil=MinsUntilTime(times[0]);
+	if(target=="ToColchester"){
+		if(minsUntil<1){
+            ColchesterNextTime=times[1];
+		}
+		else {
+            ColchesterNextTime = times[0];
+        }
+	}
+	if(target=="ToWivenhoe"){
+		if(minsUntil<1){
+            WivenhoeNextTime=times[1];
+		}
+		else{
+		WivenhoeNextTime=times[0];
+		}
+	}
 
-  if (time.length > 1) { // If time format correct
-    time = time.slice (1);  // Remove full string match value
-    //time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
-    time[0] = +time[0] % 12 || 12; // Adjust hours
-  }
-  return time.join (''); // return adjusted time or original string
+    var element = document.getElementById(target);
+	element.innerHTML="";
+
+	var next = document.createElement("div");
+	var NextTime = document.createElement("p");
+	NextTime.className="NextBusNum";
+	NextTime.style.display="inline";
+	if(minsUntil>0){
+	NextTime.appendChild(document.createTextNode(minsUntil));
+	}
+
+	next.appendChild(NextTime);
+	
+	var mins = document.createElement("p");
+	mins.className="NextbusMins";
+	mins.style.display="inline";
+	if(minsUntil>0){
+	mins.appendChild(document.createTextNode("mins"));
+	}
+	else{
+		mins.appendChild(document.createTextNode("Due"));
+	}
+	next.appendChild(mins);
+	
+	var otherTimes = document.createElement("div");
+	for(var i=0; i<times.length;i++){
+		var timepara=document.createElement("p");
+		timepara.className="otherTimes";
+		timepara.style.display="inline";
+		if(times[i]!=null){
+		timepara.appendChild(document.createTextNode(times[i]));
+		}
+		otherTimes.appendChild(timepara);
+	}
+
+	element.appendChild(next);
+	element.appendChild(otherTimes);
+
 }
+
+
+
+function refreshTimes(){
+
+    //window.alert(ColchesterMinsUntil);
+    try{
+        var colchesterBox = document.getElementById("ToColchester");
+        var timeLeftElem= colchesterBox.getElementsByClassName("NextBusNum");
+        timeLeftElem[0].innerHTML=MinsUntilTime(ColchesterNextTime);
+
+    }catch(err){
+        console.log("colchester time recal failed")
+
+    }
+
+    try{
+        var WivenhoeBox = document.getElementById("ToWivenhoe");
+        var timeLeftElem= WivenhoeBox.getElementsByClassName("NextBusNum");
+        timeLeftElem[0].innerHTML=MinsUntilTime(WivenhoeNextTime);
+
+    }catch(err){
+        console.log("wivenhoe time recal failed")
+
+    }
+
+}
+
+
+
+
+function GetStop1(){
+    getbusdata("1500IM2533", "ToColchester",["62","62B"]);
+}
+function GetStop2(){
+    getbusdata("150032002012","ToWivenhoe",["61"]);
+}
+
+var ColchesterNextTime;
+var WivenhoeNextTime;
+
+getbusdata("1500IM2533", "ToColchester",["62","62B"]);
+getbusdata("150032002012","ToWivenhoe",["61"]);
+
+var stop1=setInterval(GetStop1,600000)
+
+var stop2=setInterval(GetStop2,600000)
+
+var timeUntilRecalc = setInterval(refreshTimes, 30000);
+
+
+
+
+
+
+function tConvert (time) {
+    // Check correct time format and split into components
+    time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+    if (time.length > 1) { // If time format correct
+        time = time.slice (1);  // Remove full string match value
+        //time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+        time[0] = +time[0] % 12 || 12; // Adjust hours
+    }
+    return time.join (''); // return adjusted time or original string
+}
+
