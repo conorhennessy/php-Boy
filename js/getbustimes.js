@@ -151,24 +151,21 @@ function refreshTimes(){
 }
 
 
-
-
-function GetStop1(){
+function GetStops(){	// TODO This function should iterate through a list of BusStop Objects
     getbusdata("1500IM2533", "ToColchester",["62","62B"]);
+	getbusdata("150032002012","ToWivenhoe",["61"]);
 }
-function GetStop2(){
-    getbusdata("150032002012","ToWivenhoe",["61"]);
-}
+
+
 
 var ColchesterNextTimes;
 var WivenhoeNextTimes;
 
-getbusdata("1500IM2533", "ToColchester",["62","62B"]);
-getbusdata("150032002012","ToWivenhoe",["61"]);
+GetStops();
 
-var stop1=setInterval(GetStop1,600000)
 
-var stop2=setInterval(GetStop2,600000)
+var requestbustimes=setInterval(GetStops,600000)		//every 10 mins
+
 
 var timeUntilRecalc = setInterval(refreshTimes, 30000);
 
