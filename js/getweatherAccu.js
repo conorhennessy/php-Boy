@@ -37,20 +37,14 @@ function makeday(displaycount,mintemp,maxtemp,descrip,humidity){
 	daybox.className="weatherbox";
 	
 	var temppara = document.createElement("p");
-	var temptext = document.createTextNode(mintemp);
-	temppara.className="temp";
-	temppara.appendChild(temptext);
-	temppara.appendChild(document.createTextNode("°"));
+    temppara.className="temp";
+	temppara.innerHTML+=Math.round((mintemp+maxtemp)/2)+"°"
 	daybox.appendChild(temppara);
 	
 	var descrippara = document.createElement("p");
-	var descriptext = document.createTextNode(descrip);
-	descrippara.appendChild(descriptext);
+	descrippara.innerHTML+=descrip
+
 	daybox.appendChild(descrippara);
-
-	
-
-	
 
 	
 	var element = document.getElementById("weather");

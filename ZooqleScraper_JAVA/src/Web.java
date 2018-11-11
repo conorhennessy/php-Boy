@@ -66,6 +66,9 @@ public class Web {
                     if (contenttype.contains("tv")) {
                         contentprint="tv,";
                     }
+					if (contenttype.contains("anime")) {
+                        contentprint="anime,";
+                    }
                     writer.print(contentprint);
 
                     String seeds = item.findElement(By.className("text-muted2")).getText();

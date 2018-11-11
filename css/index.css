@@ -260,7 +260,7 @@ div.weatherpane {
     bottom: 20px;
     left: 20px;
     transform: translate(-1%,-1%); 
-    padding: 8px;
+    padding: 5px;
 	/* width:480px; */
 	height: 130px;
 }
@@ -271,7 +271,7 @@ div.weather {
 	padding-right:5px;
 	display:inline-block;
 	margin: 0 auto;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: bold;
 	font-family: sans-serif;
 	text-align:center;
@@ -291,6 +291,7 @@ div.weatherbox{
 p.temp{
 	font-size:40px;
 }
+
 
 
 /* /Date and clock piece/ */
