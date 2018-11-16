@@ -81,7 +81,7 @@ function whatDay(){
 	}
 }
 
-//show what the current
+//show what the current week is
 function uniWeek() {
 	// https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
     element = document.getElementById("weekNum");
