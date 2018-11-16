@@ -6,14 +6,24 @@ window.onload = function(){
 	meridian();
 	whatDay();
 	getdate();
+	uniWeek();
 	setInterval(function(){
 		dateobj = new Date()
 		time();
 		meridian();
 		whatDay();
 		getdate();
+		uniWeek();
 	}, 1000);
 };
+
+//Show todays date, a single number
+function getdate(){
+
+    element = document.getElementById("date");
+
+    element.innerText=dateobj.getDate();
+}
 
 
 //gets current time and changes html to reflect it
@@ -48,15 +58,8 @@ function meridian(){
 	am = document.getElementsByClassName("am")[0].classList;
 	pm = document.getElementsByClassName("pm")[0].classList;
 	
-	(hours >= 12) ? pm.add("light-on") : am.add("light-on");				//am
-	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");           ///pm
-}
-
-function getdate(){
-
-	element = document.getElementById("date")
-
-	element.innerText=dateobj.getDate()
+	(hours >= 12) ? pm.add("light-on") : am.add("light-on");				 //am
+	(hours >= 12) ? am.remove("light-on") : pm.remove("light-on");           //pm
 }
 
 
@@ -76,4 +79,21 @@ function whatDay(){
 		
 		(classArr !== undefined) && ((x == currentDay) ? classArr.add("light-on") : classArr.remove("light-on"));
 	}
+}
+
+//show what the current
+function uniWeek() {
+	// https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
+    element = document.getElementById("weekNum");
+
+    var d = new Date();
+
+    var d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+
+    var uniYearStart = new Date(Date.UTC(2018, 10, 4));
+
+    var cWeek = Math.ceil(( ( (d - uniYearStart) / 86400000) + 1)/7 + 5);
+
+    element.innerText = cWeek.toString();
+
 }
