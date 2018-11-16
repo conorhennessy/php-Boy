@@ -94,6 +94,6 @@ function uniWeek() {
 
     var cWeek = Math.ceil(( ( (d - uniYearStart) / 86400000) + 1)/7 + 5);
 
-    element.innerText = cWeek.toString();
+    element.innerText = "Uni Wk: " + cWeek.toString();
 
 }
