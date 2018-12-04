@@ -1,0 +1,1 @@
+killall chromium-browser
