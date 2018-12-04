@@ -12,7 +12,9 @@
 
 
 <body>
-	<script src="GetKeys.js"> </script> 
+	<script src="js/GetAccuweatherKeys.js"> </script>
+	<script src="js/getweatherAccu.js"> </script>
+	<script src="js/GetTransportKeys.js"> </script>
 	<div  class="busnorthbox bordered">
 	<p class="tittle">Buses to Colchester:</p>
 		<div id="ToColchester"></div>
@@ -24,18 +26,17 @@
 		<div id="ToWivenhoe"></div>
 
 	</div>
-	<script src="bus2.js"> </script> 
-	<script src="refreshNextBus.js"> </script> 
+	<script src="js/getbustimes.js"> </script>
 	
 	<div id="joke" class="dadjoke bordered">
 
 	</div>
-	<script src="getdadjoke.js"> </script>
+	<script src="js/getdadjoke.js"> </script>
 	
 	
 	<div id="torrentspane" class="torrents bordered">
 	</div>
-	<script src="readtorrentscrape.js"></script>
+	<script src="js/readtorrentscrape.js"></script>
 	
 	
 	<div class="weatherpane bordered">
@@ -44,11 +45,11 @@
 
 	</div>
 	</div>
-	<script src="getweather.js"> </script>
+	<!-- <script src="js/getweather.js"> </script> -->
 	
 	<div class="musicContainer">
 	<div id="LiveMusic" ></div>
-	<script src="SongKickAPI.js"> </script>
+	<script src="js/SongKickAPI.js"> </script>
 	</div>
 	
 	<div class="dateAndClock bordered">
@@ -85,6 +86,10 @@
 			
 			<div class="day">
 				<p class="sunday">sunday</p>
+			</div>
+			
+			<div id="weekNum" class="light-on">
+			
 			</div>
 
 		</div>
@@ -128,17 +133,17 @@
 				</div>
 			</div>
 		</div>
-	<script src="clock.js"> </script>
+	<script src="js/clock.js"> </script>
 	
 	<div id="sunriseTime">  
 	</div>
-	<script src="GetSunRiseSet.js"></script>
+	<script src="js/GetSunRiseSet.js"></script>
 	
 	</div>
 	
 	<div id="news" class="bordered">
 	</div>
-	<script src="TopArticlesBBC.js"></script>
+	<script src="js/TopArticlesBBC.js"></script>
 	
 	<div id="collection" class="collection bordered">
 		<p class="title"></p>
@@ -146,13 +151,13 @@
 		<p class="items"></p>
 		<p class="prompt"></p>
 	</div>
-	<script src="CollectionDay.js"> </script>
+	<script src="js/CollectionDay.js"> </script>
 	
 	<a href="/refresh.php">
 	<div id="localIP">
 	</div>
 	</a>
-	<script src="GetLocalIP.js"></script>
+	<script src="js/GetLocalIP.js"></script>
 
 
 </body>

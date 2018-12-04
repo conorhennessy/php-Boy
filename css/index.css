@@ -228,7 +228,7 @@ div.torrents {
 	text-align: center;
 	padding: 8px;
 	line-height: 2.5;
-	height: 150px;
+	height: 130px;
 }
 
 .green-week{
@@ -260,9 +260,9 @@ div.weatherpane {
     bottom: 20px;
     left: 20px;
     transform: translate(-1%,-1%); 
-    padding: 8px;
+    padding: 5px;
 	/* width:480px; */
-	height: 150px;
+	height: 130px;
 }
 
 div.weather {
@@ -271,7 +271,7 @@ div.weather {
 	padding-right:5px;
 	display:inline-block;
 	margin: 0 auto;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: bold;
 	font-family: sans-serif;
 	text-align:center;
@@ -293,6 +293,7 @@ p.temp{
 }
 
 
+
 /* /Date and clock piece/ */
 div.dateAndClock {
 	font-family: 'digital-7', sans-serif;
@@ -302,7 +303,7 @@ div.dateAndClock {
     right: 20px;
     transform: translate(-1%,-1%); 
     padding: 8px;
-	height: 150px;
+	height: 130px;
 }
 
 .light-on {  /*Changes color of text to appear like its "on"*/
@@ -331,6 +332,13 @@ div.days .day p {
 	font-weight: bold;
 	font-family: sans-serif;
 	text-transform: uppercase;
+}
+
+#weekNum{
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: sans-serif;
 }
 
 /* Clock */
