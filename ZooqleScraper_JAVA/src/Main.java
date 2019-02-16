@@ -5,8 +5,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 /// uses same libraries as https://github.com/Kushcabbage/Z00qleTerminal
 
 public class Main {
-    public Main() {
-    }
+
 
     public static void main(String[] args) throws InterruptedException {
         String savepath = Main.class.getProtectionDomain().getCodeSource().getLocation().getPath();

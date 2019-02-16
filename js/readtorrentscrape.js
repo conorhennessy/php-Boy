@@ -63,6 +63,9 @@ function PrintTorrent(line){
     if(vals[0]==="music"){
         name.style.color="#FF7B7B";
     }
+    if(vals[0]==="anime"){
+    	name.style.color="#ED4300";
+	}
 	
 	
 	element.appendChild(type);
