@@ -17,7 +17,7 @@ window.onload = function(){
 	}, 1000);
 };
 
-//Show today's date, a single number
+//Show todays date, a single number
 function getdate(){
 
     element = document.getElementById("date");
@@ -87,6 +87,7 @@ function uniWeek() {
     element = document.getElementById("weekNum");
 
     var d = new Date();
+
     var d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
 
     var uniYearStart = new Date(Date.UTC(2018, 10, 4));
