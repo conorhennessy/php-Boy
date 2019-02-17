@@ -261,7 +261,7 @@ div.weatherpane {
     left: 20px;
     transform: translate(-1%,-1%); 
     padding: 5px;
-	/* width:480px; */
+	width:560px; 
 	height: 130px;
 }
 
