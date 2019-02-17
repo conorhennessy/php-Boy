@@ -48,6 +48,8 @@ function PrintTorrent(line){
 	name.appendChild(nametext);
 	name.style.display="inline";
 	name.style.padding="5px";
+
+
 	if(vals[0]==="movie"){
 		name.style.color="#589EA5";
 	}
@@ -64,7 +66,7 @@ function PrintTorrent(line){
         name.style.color="#FF7B7B";
     }
     if(vals[0]==="anime"){
-    	name.style.color="#ED4300";
+    	name.style.color="#ED6B00";
 	}
 	
 	

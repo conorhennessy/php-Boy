@@ -3,7 +3,7 @@ function GetNextMonth(){
 	GetAPIKey(function(){
 		
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", "https://api.songkick.com/api/3.0/metro_areas/24426-uk-london/calendar.json?apikey="+Key+"&min_date="+StartOfNextMonth()+"&max_date="+EndOfNextMonth(), true);
+		xmlhttp.open("GET", "https://api.songkick.com/api/3.0/users/alex-hockly/calendar.json?reason=tracked_artist&apikey=vFJgueGeeIk9C2rV", true);
 		//https://www.songkick.com/developer/upcoming-events-for-metro-area   
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
