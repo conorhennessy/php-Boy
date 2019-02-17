@@ -3,25 +3,25 @@ function GetNextMonth(){
 	GetAPIKey(function(){
 		
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", "https://api.songkick.com/api/3.0/users/alex-hockly/calendar.json?reason=tracked_artist&apikey=vFJgueGeeIk9C2rV", true);
+		xmlhttp.open("GET", "https://api.songkick.com/api/3.0/users/alex-hockly/calendar.json?reason=tracked_artist&apikey="+Key, true);
 		//https://www.songkick.com/developer/upcoming-events-for-metro-area   
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				
 				var json = JSON.parse(this.responseText);
-				var events = json.resultsPage.results.event;
+				var calendar = json.resultsPage.results.calendarEntry;
 				var lastDate="";
 				var count=0
-				for(event in events){
+				for(gig in calendar){
 					if(count>26){break}
-					var eventobj = events[event];
+					var eventobj = calendar[gig];
 					if(eventobj.type=="festival"){
 						continue;
 					}
 					
-					var artist = eventobj.performance[0].artist.displayName;
-					var venue = eventobj.venue.displayName;
-					var date = eventobj.start.date;
+					var artist = eventobj.event.performance[0].artist.displayName;
+					var venue = eventobj.event.venue.displayName;
+					var date = eventobj.event.start.date;
 					
 					if(date!=lastDate){		//if date changes print a new header
 						printDate(date);

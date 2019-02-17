@@ -14,13 +14,13 @@ grad.css
 testjson.json
 transportKeys.json
 SongKickKey.json
+collectionweek.json
 *.iml
 .idea/workspace.xml
 .idea/vcs.xml
 .idea/modules.xml
 .idea/misc.xml
 .idea/inspectionProfiles/Project_Default.xml
-collectionweek.json
 test.html
 collectionpage.html
 /zooqlescraper
@@ -31,3 +31,6 @@ ZooqleScraper_JAVA.iml
 ZooqleScraper_JAVA/out/artifacts/ZooqleScraper_JAVA_jar/ZooqleScraper_JAVA.jar
 ZooqleScraper_JAVA/src/META-INF/MANIFEST.MF
 
+AccuweatherKeys.json
+SongKickKey.json
+transportKeys.json
