@@ -15,6 +15,7 @@ testjson.json
 transportKeys.json
 SongKickKey.json
 collectionweek.json
+AccuweatherKeys.json
 *.iml
 .idea/workspace.xml
 .idea/vcs.xml
@@ -30,7 +31,3 @@ collectionpage.html
 ZooqleScraper_JAVA.iml
 ZooqleScraper_JAVA/out/artifacts/ZooqleScraper_JAVA_jar/ZooqleScraper_JAVA.jar
 ZooqleScraper_JAVA/src/META-INF/MANIFEST.MF
-
-AccuweatherKeys.json
-SongKickKey.json
-transportKeys.json
