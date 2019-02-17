@@ -8,7 +8,7 @@ function Arrayday(){
 	var date = new Date(),
 	hours = date.getHours();
 		var tmoz9=33-hours;
-		Dayarray.push(Math.round(tmoz9/3));		//tmoz at 9am
+		Dayarray.push(Math.round(tmoz9/3));		//tmoz  at 9am
 		
 		Dayarray.push(Math.round((tmoz9+8)/3));	//tmoz at 5pm
 		
