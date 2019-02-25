@@ -48,35 +48,36 @@ public class Web {
                     String wtf = item.getText();
                     String contenttype = item.findElement(By.tagName("i")).toString();
 
-                    String contentprint=",";                    //default value to prevent exceptions
+                    String contentprint="";                    //default value to prevent exceptions
                     if (contenttype.contains("movies")) {
-                        contentprint="movie,";
+                        contentprint="movie";
                     }
                     if (contenttype.contains("music")) {
-                        contentprint="music,";
+                        contentprint="music";
                     }
 
                     if (contenttype.contains("game")) {
-                        contentprint="game,";
+                        contentprint="game";
                     }
                     if (contenttype.contains("app")) {
-                        contentprint="app,";
+                        contentprint="app";
                     }
 
                     if (contenttype.contains("tv")) {
-                        contentprint="tv,";
+                        contentprint="tv";
                     }
 					if (contenttype.contains("anime")) {
-                        contentprint="anime,";
+                        contentprint="anime";
                     }
-                    writer.print(contentprint);
 
                     String seeds = item.findElement(By.className("text-muted2")).getText();
                     String name = item.findElement(By.tagName("a")).getText();
+                    String link= item.findElement(By.tagName("a")).getAttribute("href");
                     name = name.substring(seeds.length() + 1);
                     seeds = seeds.replaceAll("\\s+", "");
-                    writer.print(seeds + ",");
-                    writer.println(name);
+
+                    writer.println(contentprint+","+seeds+","+name+","+link);
+
                 }
 
                 writer.close();

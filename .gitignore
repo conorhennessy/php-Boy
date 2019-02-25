@@ -31,3 +31,8 @@ collectionpage.html
 ZooqleScraper_JAVA.iml
 ZooqleScraper_JAVA/out/artifacts/ZooqleScraper_JAVA_jar/ZooqleScraper_JAVA.jar
 ZooqleScraper_JAVA/src/META-INF/MANIFEST.MF
+*.class
+ZooqleScraper_JAVA/target/maven-archiver/pom.properties
+ZooqleScraper_JAVA/target/ZooqleScraper-1.jar
+ZooqleScraper_JAVA/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+ZooqleScraper_JAVA/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst

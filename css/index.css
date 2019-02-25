@@ -33,7 +33,10 @@
 	padding: 0;
 }
 
-
+a {
+	text-decoration: none;
+	color: white;
+}
 /*
 body {
 	background:#ff7b7b;
@@ -201,6 +204,13 @@ div.torrents {
 	font-size: 12px;
 	font-weight: bold;
 
+}
+
+.torrent_name {
+	display:inline;
+	padding:5px;
+	color: white !important;
+	text-decoration: none;
 }
 
 
