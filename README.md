@@ -27,4 +27,20 @@ on login the pi now, updates from git, opens chromium (reopens if it crashes) an
 ![alt text](https://raw.githubusercontent.com/conorhennessy/php-Boy/master/preview.jpg)
 
 keep the screen on:
-https://www.raspberrypi.org/forums/viewtopic.php?t=18200
+
+1. sudo nano /etc/kbd/config
+
+2. Change these two lines.
+
+  screen blanking timeout. monitor remains on, but the screen is cleared to
+  range: 0-60 min (0==never) kernels I've looked at default to 10 minutes.
+  (see linux/drivers/char/console.c)
+ BLANK_TIME=0 (Was 30)
+
+  Powerdown time. The console will go to DPMS Off mode POWERDOWN_TIME
+  minutes _after_ blanking. (POWERDOWN_TIME + BLANK_TIME after the last input)
+ POWERDOWN_TIME=0 (I think it was 15)
+
+3. Reboot
+
+taken from https://www.raspberrypi.org/forums/viewtopic.php?t=18200
