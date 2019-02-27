@@ -58,7 +58,7 @@ function printEvent(artist,venue,date){
 }
 
 function printDate(date){
-	console.log(date);
+	//console.log(date);
 	//var textDate= new Date(date).toString().split(" ");
 	var textDate=date.split("-")[2];	
 	textDate+=" "+getMonthName(date.split("-")[1]);

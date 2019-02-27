@@ -1,6 +1,10 @@
 function Getweather() {
     GetWeatherCredentials(function() {
         var element = document.getElementById("weather");
+        if(element==null){
+        	console.log("couldnt get weather element by Id")
+        	return -1;
+		}
         element.innerHTML = "";
 
         var xmlhttp = new XMLHttpRequest();

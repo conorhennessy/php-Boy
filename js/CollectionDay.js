@@ -73,7 +73,7 @@ function displayCollection(){
     //odd is blue, even is green
     if (day == 2 || day == 3){
         PrintCollection(date,Week)
-        console.log("print")
+        //console.log("print")
     }
 
     else {
