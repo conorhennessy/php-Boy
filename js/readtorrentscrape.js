@@ -30,10 +30,18 @@ function PrintTorrent(line){
 
 	var vals = line.split(",");
 
-	console.log(vals)
+
+
+
 	var namelinkEle = document.createElement("a");
 	namelinkEle.setAttribute("href",vals[3])
-	namelinkEle.innerHTML=vals[2].substr(0,46)+" "
+
+	if(vals[1].length==3){}
+
+	else
+    {
+        namelinkEle.innerHTML = vals[2].substr(0, 46) + " "
+    }
 	var name = document.createElement("p");
 
 	name.className="torrent_name"

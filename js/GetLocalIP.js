@@ -74,14 +74,15 @@ function getIPs(callback){
     }, 1000);
 }
 
-//Test: Print the IP addresses into the console
-getIPs(function(ip){PrintIP(ip);});
 
-
-function PrintIP(ip){
-	element = document.getElementById("localIP");
-	
-	element.appendChild(document.createTextNode(ip));
-	
-	
+function Runipfetch(){
+    getIPs(function(ip){PrintIP(ip);});
 }
+function PrintIP(ip){
+	document.getElementById("localIP").innerHTML=ip;
+
+}
+
+
+getIPs(function(ip){PrintIP(ip);});     //run once on load
+var getipinterval=setInterval(Runipfetch,600000)       //milliseconds
