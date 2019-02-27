@@ -28,9 +28,9 @@ on login the pi now, updates from git, opens chromium (reopens if it crashes) an
 
 keep the screen on:
 
-1. type 'sudo nano /etc/lightdm/lightdm.conf' in terminal
+1. type `sudo nano /etc/lightdm/lightdm.conf` in terminal
 
-2. Find [Seat:*] in the file and add 'xserver-command=X -s 0 dpms' to the line below
+2. Find [Seat:*] in the file and add `xserver-command=X -s 0 dpms` to the line below
 
 3. Reboot
 
