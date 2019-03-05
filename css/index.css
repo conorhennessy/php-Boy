@@ -272,39 +272,33 @@ div.weatherpane {
   bottom: 20px;
   left: 20px;
   transform: translate(-1%,-1%);
-  //padding: 8px;
 	width:570px;
 	height: 130px;
+	text-align:center;
 }
 
 #weather {
-	//width:100%;
-	//padding-left:5px;
-	//padding-right:5px;
 	display:inline-block;
 
-
-
-	margin: 0 auto;
 	font-size: 10px;
 	font-weight: bold;
 	font-family: sans-serif;
 	text-align:center;
 	text-transform: uppercase;
+	padding-top: 15px;
 }
 
 div.weatherbox{
 	float:left;
-	height:100px;
 	padding-right: 3px;
 	padding-left: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
-	font-size: 10px;
+	font-size: 8px;
 }
 
 p.temp{
-	font-size:40px;
+	font-size:30px;
 }
 
 
@@ -317,7 +311,7 @@ div.dateAndClock {
   bottom: 20px;
   right: 20px;
   transform: translate(-1%,-1%);
-  //padding: 8px;
+
 	height: 130px;
 }
 
