@@ -24,6 +24,7 @@ on login the pi now, updates from git, opens chromium (reopens if it crashes) an
 
 
 
+![alt text](https://raw.githubusercontent.com/conorhennessy/php-Boy/master/preview.jpg)
 
 keep the screen on:
 
